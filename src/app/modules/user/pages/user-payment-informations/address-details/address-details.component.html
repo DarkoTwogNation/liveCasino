@@ -1,33 +1,32 @@
-module.exports = "
-<form [formGroup]=\ "addressDetailsForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onAddressDetailsUpdate()\" class=\ "form-inline\">\r\n <label for=\ "address1\" class=\ "d-block text-right\">ADDRESS 1 <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\ "address1\" id=\ "address1\">\r\n
-    <div class=\
-        "add-info\" *ngIf=\ "address1.invalid && (address1.dirty || address1.touched)\">\r\n
-        <div *ngIf=\ "address1.errors.required\">This field is reqiured</div>\r\n
-        <div *ngIf=\ "address1.errors.minlength\">The minimum length is 6 characters</div>\r\n </div>\r\n\r\n <label for=\ "address2\" class=\ "d-block text-right\">ADDRESS 2 <span class=\"red-colored ml-0 mr-2\">\r\n        (Optional)</span></label>\r\n <input type=\ "text\" class=\
-        "form-control\" formControlName=\ "address2\" id=\ "address2\">\r\n\r\n <label for=\ "city\" class=\ "d-block text-right\">CITY <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\
-        "city\" id=\ "city\">\r\n
-    <div class=\ "add-info\" *ngIf=\ "city.invalid && (city.dirty || city.touched)\">\r\n
-        <div *ngIf=\ "city.errors.required\">This field is reqiured</div>\r\n
-        <div *ngIf=\ "city.errors.minlength\">The minimum length is 3 characters</div>\r\n
-        <div *ngIf=\ "city.errors.pattern\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n <label for=\ "state-prov\" class=\ "d-block text-right\">STATE/PROV <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n
-    <!-- <select class=\"custom-select\" id=\"state-prov\">\r\n      <option selected>--------------</option>\r\n      <option value=\"1\">One</option>\r\n      <option value=\"2\">Two</option>\r\n      <option value=\"3\">Three</option>\r\n      <option value=\"4\">Four</option>\r\n    </select> -->\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\ "stateProvince\" id=\ "state-prov\">\r\n\r\n <label for=\ "zip-postal\" class=\ "d-block text-right\">ZIP / POSTAL CODE <span\r\n        class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n
-    <input type=\ "text\" class=\ "form-control\" formControlName=\ "zipPostalCode\" id=\ "zip-postal\">\r\n
-    <div class=\ "add-info\" *ngIf=\ "zipPostalCode.invalid && (zipPostalCode.dirty || zipPostalCode.touched)\">\r\n
-        <div *ngIf=\ "zipPostalCode.errors.required\">This field is reqiured</div>\r\n
-        <div *ngIf=\ "zipPostalCode.errors.minlength||zipPostalCode.errors.maxLength\">Please enter exactly 5 characters</div>\r\n
-        <div *ngIf=\ "zipPostalCode.errors.pattern\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n <label for=\ "country\" class=\ "d-block text-right\">COUNTRY <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n
-    <!-- <select class=\"custom-select\" id=\"country\">\r\n      <option selected>--------------</option>\r\n      <option value=\"1\">One</option>\r\n      <option value=\"2\">Two</option>\r\n      <option value=\"3\">Three</option>\r\n      <option value=\"4\">Four</option>\r\n    </select> -->\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\ "country\" id=\ "country\">\r\n\r\n <label for=\ "cell-number\" class=\ "d-block text-right\">CELL NUMBER <span class=\"red-colored ml-0 mr-2\">\r\n        (Optional)</span></label>\r\n
-    <input type=\ "text\" class=\ "form-control\" formControlName=\ "cellNumber\" id=\ "cell-number\">
-    <div class=\ "i-info\">i</div>\r\n\r\n <label for=\ "phone-number\" class=\ "d-block text-right\">PHONE NUMBER <span class=\"red-colored ml-0 mr-2\">\r\n        (Optional)</span></label>\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\ "phoneNumber\"
-        id=\ "phone-number\">
-    <div class=\ "i-info\">i</div>\r\n\r\n <label for=\ "promo-code\" class=\ "d-block text-right\">PROMO CODE <span class=\"red-colored ml-0 mr-2\">\r\n        (Optional)</span></label>\r\n <input type=\ "text\" class=\ "form-control promo-code\" formControlName=\
-        "promoCode\" id=\ "promo-code\">\r\n\r\n <button type=\ "submit\" [disabled]=\ "addressDetailsForm.invalid\" class=\ "user-btn\">APPLY</button>\r\n\r\n
-    <div class=\ "col-12 get-alerts\">\r\n
-        <p class=\ "text-center w-100 w-md-75 my-4 p-larger\">Don’t miss out! Get alerts for online exclusive\r\n promotions & new\r\n games as\r\n they launch.\r\n If you would like to receive marketing communications, please select any of the following:</p>\r\n
-        <div class=\
-            "text-center my-3 mx-auto d-flex justify-content-around flex-wrap\">\r\n <label class=\ "form-check-custom mr-4 mb-2 d-inline-block text-left\">HOME ADRESS\r\n                <input type=\"checkbox\" formControlName=\"sendHome\">\r\n                <span class=\"checkmark\"></span>\r\n              </label>\r\n
-            <label class=\ "form-check-custom mr-4 mb-2 d-inline-block text-left\">EMAIL\r\n                <input type=\"checkbox\" formControlName=\"sendEmail\">\r\n                <span class=\"checkmark\"></span>\r\n              </label>\r\n
+<form [formGroup]="addressDetailsForm" #formDir="ngForm" (ngSubmit)="onAddressDetailsUpdate()" class="form-inline"> <label for="address1" class="d-block text-right">ADDRESS 1 <span class="red-colored ml-0 mr-2">        *</span></label> <input type="text" class="form-control" formControlName="address1" id="address1">
+    <div class=
+        "add-info" *ngIf="address1.invalid && (address1.dirty || address1.touched)">
+        <div *ngIf="address1.errors.required">This field is reqiured</div>
+        <div *ngIf="address1.errors.minlength">The minimum length is 6 characters</div> </div> <label for="address2" class="d-block text-right">ADDRESS 2 <span class="red-colored ml-0 mr-2">        (Optional)</span></label> <input type="text" class=
+        "form-control" formControlName="address2" id="address2"> <label for="city" class="d-block text-right">CITY <span class="red-colored ml-0 mr-2">        *</span></label> <input type="text" class="form-control" formControlName=
+        "city" id="city">
+    <div class="add-info" *ngIf="city.invalid && (city.dirty || city.touched)">
+        <div *ngIf="city.errors.required">This field is reqiured</div>
+        <div *ngIf="city.errors.minlength">The minimum length is 3 characters</div>
+        <div *ngIf="city.errors.pattern">Please enter only alphabetic characters</div> </div> <label for="state-prov" class="d-block text-right">STATE/PROV <span class="red-colored ml-0 mr-2">        *</span></label>
+    <!-- <select class="custom-select" id="state-prov">      <option selected>--------------</option>      <option value="1">One</option>      <option value="2">Two</option>      <option value="3">Three</option>      <option value="4">Four</option>    </select> --> <input type="text" class="form-control" formControlName="stateProvince" id="state-prov"> <label for="zip-postal" class="d-block text-right">ZIP / POSTAL CODE <span        class="red-colored ml-0 mr-2">        *</span></label>
+    <input type="text" class="form-control" formControlName="zipPostalCode" id="zip-postal">
+    <div class="add-info" *ngIf="zipPostalCode.invalid && (zipPostalCode.dirty || zipPostalCode.touched)">
+        <div *ngIf="zipPostalCode.errors.required">This field is reqiured</div>
+        <div *ngIf="zipPostalCode.errors.minlength||zipPostalCode.errors.maxLength">Please enter exactly 5 characters</div>
+        <div *ngIf="zipPostalCode.errors.pattern">Please enter only alphabetic characters</div> </div> <label for="country" class="d-block text-right">COUNTRY <span class="red-colored ml-0 mr-2">        *</span></label>
+    <!-- <select class="custom-select" id="country">      <option selected>--------------</option>      <option value="1">One</option>      <option value="2">Two</option>      <option value="3">Three</option>      <option value="4">Four</option>    </select> --> <input type="text" class="form-control" formControlName="country" id="country"> <label for="cell-number" class="d-block text-right">CELL NUMBER <span class="red-colored ml-0 mr-2">        (Optional)</span></label>
+    <input type="text" class="form-control" formControlName="cellNumber" id="cell-number">
+    <div class="i-info">i</div> <label for="phone-number" class="d-block text-right">PHONE NUMBER <span class="red-colored ml-0 mr-2">        (Optional)</span></label> <input type="text" class="form-control" formControlName="phoneNumber"
+        id="phone-number">
+    <div class="i-info">i</div> <label for="promo-code" class="d-block text-right">PROMO CODE <span class="red-colored ml-0 mr-2">        (Optional)</span></label> <input type="text" class="form-control promo-code" formControlName=
+        "promoCode" id="promo-code"> <button type="submit" [disabled]="addressDetailsForm.invalid" class="user-btn">APPLY</button>
+    <div class="col-12 get-alerts">
+        <p class="text-center w-100 w-md-75 my-4 p-larger">Don’t miss out! Get alerts for online exclusive promotions & new games as they launch. If you would like to receive marketing communications, please select any of the following:</p>
+        <div class=
+            "text-center my-3 mx-auto d-flex justify-content-around flex-wrap"> <label class="form-check-custom mr-4 mb-2 d-inline-block text-left">HOME ADRESS                <input type="checkbox" formControlName="sendHome">                <span class="checkmark"></span>              </label>
+            <label class="form-check-custom mr-4 mb-2 d-inline-block text-left">EMAIL                <input type="checkbox" formControlName="sendEmail">                <span class="checkmark"></span>              </label>
             <label
-                class=\ "form-check-custom d-inline\">SMS MESSAGE\r\n <input type=\ "checkbox\" formControlName=\ "sendSms\">\r\n <span class=\ "checkmark\"></span>\r\n </label>\r\n </div>\r\n
-        <p class=\ "text-center my-4 p-larger\">Your transaction may take up to 15 seconds to process. Please wait\r\n until you see\r\n the\r\n confirmation page, and do not click back or refresh on your browser.</p>\r\n </div>\r\n
-    <div class=\ "btns-box my-5\">\r\n <button class=\ "user-btn d-inline mr-2\" type=\ "button\" (click)=\ "stepBack()\">BACK</button>\r\n <button class=\ "user-btn d-inline\" type=\ "submit\" [disabled]=\ "addressDetailsForm.invalid\">PURCHASE</button>\r\n </div>\r\n </form>"
+                class="form-check-custom d-inline">SMS MESSAGE <input type="checkbox" formControlName="sendSms"> <span class="checkmark"></span> </label> </div>
+        <p class="text-center my-4 p-larger">Your transaction may take up to 15 seconds to process. Please wait until you see the confirmation page, and do not click back or refresh on your browser.</p> </div>
+    <div class="btns-box my-5"> <button class="user-btn d-inline mr-2" type="button" (click)="stepBack()">BACK</button> <button class="user-btn d-inline" type="submit" [disabled]="addressDetailsForm.invalid">PURCHASE</button> </div> </form>

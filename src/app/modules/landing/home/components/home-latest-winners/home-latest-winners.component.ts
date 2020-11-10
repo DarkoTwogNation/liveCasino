@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { WinnerModel } from 'src/app/core/models/entities/winner';
+// import { WinnerModel } from 'src/app/core/models/entities/winner';
 
 @Component({
   selector: 'app-home-latest-winners',

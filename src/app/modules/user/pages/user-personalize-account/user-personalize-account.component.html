@@ -1,25 +1,24 @@
-module.exports = "
-<div class=\ "user-styles pt-4 pt-sm-5\">\r\n
-    <div class=\ "row\">\r\n
-        <div class=\ "col-12 d-flex flex-column flex-md-row mb-3 mb-sm-5\">\r\n
-            <h3 class=\ "mb-4\">Personalize Account</h3>\r\n
-            <!-- <a class=\"ml-md-auto\" href=\"javascript:void(0)\"> -->\r\n
-            <div class=\ "ml-md-auto\">\r\n <img src=\ "../../../../../assets/img/Welcome_Rectangle.jpg\" alt=\ "\" class=\ "img-fluid\">\r\n </div>\r\n
-            <!-- </a> -->\r\n </div>\r\n\r\n
-        <div class=\ "col-12\">\r\n
-            <div class=\ "account-form d-md-flex mt-5 mb-4\">\r\n
-                <form [formGroup]=\ "personalizeForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onUpdateAccount()\" class=\ "form-inline col-12 col-md-7 pr-0\">\r\n <label for=\ "title\" class=\ "d-block text-right\">TITLE <span class=\"red-colored ml-0 mr-2\"> *</span></label>\r\n <select formControlName=\ "title\" class=\ "form-control\" id=\ "title\">\r\n            <option value=\"\">Please select Title</option>\r\n            <option *ngFor=\"let t of titleEnums\" [value]=\"t.value\" [selected]=\"t.value == title.value\">{{t.value}}</option>\r\n          </select>\r\n
-                    <div class=\ "add-info\" *ngIf=\ "title.invalid && (title.dirty || title.touched)\">\r\n
-                        <div>This field is reqiured</div>\r\n </div>\r\n <label for=\ "first-name\" class=\ "d-block text-right\">FIRST NAME <span class=\"red-colored ml-0 mr-2\">\r\n              *</span></label>\r\n <input type=\ "text\" formControlName=\
-                        "firstName\" class=\ "form-control\" id=\ "first-name\">\r\n
-                    <div class=\ "add-info\" *ngIf=\ "firstName.invalid && (firstName.dirty || firstName.touched)\">\r\n
-                        <div *ngIf=\ "firstName.errors.required\">This field is reqiured</div>\r\n
-                        <div *ngIf=\ "firstName.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n <label for=\ "last-name\" class=\ "d-block text-right\">LAST NAME <span class=\"red-colored ml-0 mr-2\">\r\n              *</span></label>\r\n <input type=\ "text\" formControlName=\
-                        "lastName\" class=\ "form-control\" id=\ "last-name\">\r\n
-                    <div class=\ "add-info\" *ngIf=\ "lastName.invalid && (lastName.dirty || lastName.touched)\">\r\n
-                        <div *ngIf=\ "lastName.errors.required\">This field is reqiured</div>\r\n
-                        <div *ngIf=\ "lastName.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n
-                    <app-date-picker [parentForm]=\ "personalizeForm\"></app-date-picker>\r\n\r\n <button [disabled]=\ "personalizeForm.invalid\" type=\ "submit\" class=\ "user-btn mt-5\">PERSONALIZE ACCOUNT</button>\r\n </form>\r\n
-                <!-- PLACE FOR USER-NEED-HELP -->\r\n
-                <app-user-need-help></app-user-need-help>\r\n </div>\r\n </div>\r\n </div>\r\n
-    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"
+<div class="user-styles pt-4 pt-sm-5">
+    <div class="row">
+        <div class="col-12 d-flex flex-column flex-md-row mb-3 mb-sm-5">
+            <h3 class="mb-4">Personalize Account</h3>
+            <!-- <a class="ml-md-auto" href="javascript:void(0)"> -->
+            <div class="ml-md-auto"> <img src="../../../../../assets/img/Welcome_Rectangle.jpg" alt="" class="img-fluid"> </div>
+            <!-- </a> --> </div>
+        <div class="col-12">
+            <div class="account-form d-md-flex mt-5 mb-4">
+                <form [formGroup]="personalizeForm" #formDir="ngForm" (ngSubmit)="onUpdateAccount()" class="form-inline col-12 col-md-7 pr-0"> <label for="title" class="d-block text-right">TITLE <span class="red-colored ml-0 mr-2"> *</span></label> <select formControlName="title" class="form-control" id="title">            <option value="">Please select Title</option>            <option *ngFor="let t of titleEnums" [value]="t.value" [selected]="t.value == title.value">{{t.value}}</option>          </select>
+                    <div class="add-info" *ngIf="title.invalid && (title.dirty || title.touched)">
+                        <div>This field is reqiured</div> </div> <label for="first-name" class="d-block text-right">FIRST NAME <span class="red-colored ml-0 mr-2">              *</span></label> <input type="text" formControlName=
+                        "firstName" class="form-control" id="first-name">
+                    <div class="add-info" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                        <div *ngIf="firstName.errors.required">This field is reqiured</div>
+                        <div *ngIf="firstName.errors.minlength">Please enter only alphabetic characters</div> </div> <label for="last-name" class="d-block text-right">LAST NAME <span class="red-colored ml-0 mr-2">              *</span></label> <input type="text" formControlName=
+                        "lastName" class="form-control" id="last-name">
+                    <div class="add-info" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                        <div *ngIf="lastName.errors.required">This field is reqiured</div>
+                        <div *ngIf="lastName.errors.minlength">Please enter only alphabetic characters</div> </div>
+                    <app-date-picker [parentForm]="personalizeForm"></app-date-picker> <button [disabled]="personalizeForm.invalid" type="submit" class="user-btn mt-5">PERSONALIZE ACCOUNT</button> </form>
+                <!-- PLACE FOR USER-NEED-HELP -->
+                <app-user-need-help></app-user-need-help> </div> </div> </div>
+    <app-credit-cards></app-credit-cards></div>

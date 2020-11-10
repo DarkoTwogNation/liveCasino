@@ -122,7 +122,7 @@ export class TournamentsComponent implements OnInit {
     );
   }
 
-  seeTournamentDetails(tournament: Tournament): void {
+  seeTournamentDetails(tournament: any): void {
     this.tournamentDetails = tournament;
   }
 }

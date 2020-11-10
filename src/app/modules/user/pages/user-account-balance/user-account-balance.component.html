@@ -1,25 +1,24 @@
-module.exports = "
-<div class=\ "user-styles pt-3 account-balance\">\r\n
-    <div class=\ "row\">\r\n
-        <div class=\ "col-12 mb-5\">\r\n
-            <h3 class=\ "mb-3\">Account-Balance</h3>\r\n
-            <p class=\ "mb-2 balance-text\">This is your account balance, showing how many virtual credits you have to play games\r\n online here\r\n at Live! Casino, and how many credits you have “In Play’ in open game sessions.</p>\r\n
-            <div class=\ "col-12\">\r\n
-                <div class=\ "row\">\r\n
-                    <div class=\ "total-credits col-12 col-sm-6 pr-0 pr-sm-2 pl-0 mb-3 mb-sm-0\">\r\n
-                        <div class=\ "total-credits-box pb-2  d-flex flex-column\">\r\n
-                            <div class=\ "total d-flex justify-content-between align-items-center px-3\">\r\n
-                                <h5 class=\ "mb-0\">Total Virtual Credits:</h5>\r\n
-                                <div class=\ "total-ammount\">{{ userAccountBalance.totalVirtualCredit | number:'4.0' }}</div>\r\n </div>\r\n
-                            <div class=\ "in-play d-flex justify-content-between  align-items-center px-3\">\r\n
-                                <h5 class=\ "mb-0\">In Play:</h5>\r\n
-                                <div class=\ "in-play-ammount\">{{ userAccountBalance.creditInPlay | number:'4.0' }}</div>\r\n </div>\r\n
-                            <div class=\ "available d-flex justify-content-between  align-items-center p-2 mt-auto mx-2\">\r\n
-                                <h5 class=\ "mb-0\">Available Balance</h5>\r\n
-                                <div class=\ "available-ammount\">{{ userAccountBalance.availableBalance | number:'4.0' }}</div>\r\n </div>\r\n </div>\r\n </div>\r\n
-                    <div class=\ "col-12 col-sm-6 pl-0 pl-sm-2 pr-0 low-credits\">\r\n
-                        <div class=\ "low-credits-box d-flex flex-column justify-content-between align-items-center\">\r\n
-                            <h3>LOW ON CREDITS?</h3>\r\n
-                            <div class=\ "arrow-btn text-center\">\r\n <a class=\ "button mx-auto d-flex justify-content-center align-items-center\"\r\n [routerLink]=\ "['/buy-credits']\">\r\n                  BUY CREDITS\r\n                  <span class=\"arrow d-flex justify-content-center align-items-center\"> ❯</span>\r\n                </a>\r\n
-                                </div>\r\n </div>\r\n </div>\r\n\r\n </div>\r\n </div>\r\n </div>\r\n\r\n </div>\r\n
-    <app-credit-cards></app-credit-cards>\r\n</div>"
+<div class="user-styles pt-3 account-balance">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <h3 class="mb-3">Account-Balance</h3>
+            <p class="mb-2 balance-text">This is your account balance, showing how many virtual credits you have to play games online here at Live! Casino, and how many credits you have “In Play’ in open game sessions.</p>
+            <div class="col-12">
+                <div class="row">
+                    <div class="total-credits col-12 col-sm-6 pr-0 pr-sm-2 pl-0 mb-3 mb-sm-0">
+                        <div class="total-credits-box pb-2  d-flex flex-column">
+                            <div class="total d-flex justify-content-between align-items-center px-3">
+                                <h5 class="mb-0">Total Virtual Credits:</h5>
+                                <div class="total-ammount">{{ userAccountBalance.totalVirtualCredit | number:'4.0' }}</div> </div>
+                            <div class="in-play d-flex justify-content-between  align-items-center px-3">
+                                <h5 class="mb-0">In Play:</h5>
+                                <div class="in-play-ammount">{{ userAccountBalance.creditInPlay | number:'4.0' }}</div> </div>
+                            <div class="available d-flex justify-content-between  align-items-center p-2 mt-auto mx-2">
+                                <h5 class="mb-0">Available Balance</h5>
+                                <div class="available-ammount">{{ userAccountBalance.availableBalance | number:'4.0' }}</div> </div> </div> </div>
+                    <div class="col-12 col-sm-6 pl-0 pl-sm-2 pr-0 low-credits">
+                        <div class="low-credits-box d-flex flex-column justify-content-between align-items-center">
+                            <h3>LOW ON CREDITS?</h3>
+                            <div class="arrow-btn text-center"> <a class="button mx-auto d-flex justify-content-center align-items-center" [routerLink]="['/buy-credits']">                  BUY CREDITS                  <span class="arrow d-flex justify-content-center align-items-center"> ❯</span>                </a>
+                                </div> </div> </div> </div> </div> </div> </div>
+    <app-credit-cards></app-credit-cards></div>

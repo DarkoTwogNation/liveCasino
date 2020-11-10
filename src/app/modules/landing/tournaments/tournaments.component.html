@@ -1,163 +1,162 @@
-module.exports = "
-<div class=\ "container content-wrapper\">\r\n
-    <!-- Tournaments / change content adding classes: invite-only, history, help-->\r\n
-    <div class=\ "row tournaments\">\r\n
-        <div class=\ "col-12\">\r\n
-            <h2 class=\ "main-heading first-heading\">WELCOME TO LIVE! <span class=\ "mobile-hide\">SOCIAL CASINO</span>
-                <span\r\n class=\ "tablet-hide\">, WHERE WE ARE ALWAYS ON!</span>
-            </h2>\r\n </div>\r\n\r\n
-        <div class=\ "col-12\">\r\n
-            <h2 class=\ "main-heading\">SLOTS TOURNAMENTS</h2>\r\n
-            <div class=\ "tournaments-menu mx-auto d-flex justify-content-center mt-2 mb-4\">\r\n <a class=\ "button tournaments-btn all-btn\" \r\n [routerLinkActive]=\ "['active','']\"\r\n [routerLink]=\ "['/tournaments/all']\">ALL</a>\r\n <a class=\ "button tournaments-btn invite-only-btn\" \r\n [routerLinkActive]=\
-                    "['active','']\"\r\n [routerLink]=\ "['/tournaments/invite']\"> INVITE ONLY </a>\r\n <a class=\ "button tournaments-btn history-btn\"\r\n [routerLinkActive]=\ "['active','']\"\r\n [routerLink]=\ "['/tournaments/history']\">TOURNAMENT HISTORY</a>\r\n
-                <a [routerLink]=\ "['/tournaments/help']\" \r\n [routerLinkActive]=\ "['active','']\"\r\n class=\ "button tournaments-btn help-btn\"> HELP </a>\r\n </div>\r\n </div>\r\n\r\n
-        <router-outlet></router-outlet>\r\n\r\n
-        <!-- tournament history -->\r\n
-        <div class=\ "history-box w-100 col-12\">\r\n
-            <div class=\ "d-flex justify-content-between align-items-center mb-3\">\r\n
-                <h4 class=\ "mb-0\">Tournament history</h4>\r\n <a href=\ "javascript:void(0)\"><button class=\"rectangle-btn position-static \">BACK</button></a>\r\n </div>\r\n
-            <div class=\ "table-responsive\">\r\n\r\n
-                <table class=\ "table text-left user-table\">\r\n
-                    <thead class=\ "\">\r\n
-                        <tr>\r\n
-                            <th scope=\ "col\">ID</th>\r\n
-                            <th scope=\ "col\">NAME</th>\r\n
-                            <th scope=\ "col\">START TIME</th>\r\n
-                            <th scope=\ "col\">END TIME</th>\r\n
-                            <th scope=\ "col\">STATUS</th>\r\n </tr>\r\n </thead>\r\n
-                    <tbody>\r\n
-                        <tr>\r\n
-                            <!-- no-tournament-history td -->\r\n
-                            <td colspan=\ "5\">There is no tournament history.</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>53766</td>\r\n
-                            <td>Full Moon Diamond Tournament</td>\r\n
-                            <td>06-20-2019 - 08:18:14 EDT</td>\r\n
-                            <td> </td>\r\n
-                            <td><a href=\ "javascript:void(0)\">In Play</a></td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>53766</td>\r\n
-                            <td><a href=\ "javascript:void(0)\">King And Queen Tournament</a></td>\r\n
-                            <td>06-20-2019 - 08:18:14 EDT</td>\r\n
-                            <td>06-20-2019 - 08:18:14 EDT</td>\r\n
-                            <td>Completed</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>53766</td>\r\n
-                            <td><a href=\ "javascript:void(0)\">Full Moon Diamond Tournament</a></td>\r\n
-                            <td>06-20-2019 - 08:18:14 EDT</td>\r\n
-                            <td>06-20-2019 - 08:18:14 EDT</td>\r\n
-                            <td>Completed</td>\r\n </tr>\r\n\r\n </tbody>\r\n </table>\r\n </div>\r\n
-            <div class=\ "pagination-wrapper\">\r\n <span>Page</span>\r\n
-                <nav aria-label=\ "...\" class=\ "d-inline-block ml-5\">\r\n
-                    <ul class=\ "pagination pagination-sm\">\r\n
-                        <li class=\ "page-item disabled\">\r\n <span class=\ "page-link\">Previous</span>\r\n </li>\r\n
-                        <li class=\ "page-item\"><a class=\ "page-link\" href=\ "javascript:void(0)\">1</a></li>\r\n
-                        <li class=\ "page-item active\" aria-current=\ "page\">\r\n <span class=\ "page-link\">\r\n                2\r\n                <span class=\"sr-only\">(current)</span>\r\n </span>\r\n </li>\r\n
-                        <li class=\ "page-item\"><a class=\ "page-link\" href=\ "javascript:void(0)\">3</a></li>\r\n
-                        <li class=\ "page-item\">\r\n <a class=\ "page-link\" href=\ "javascript:void(0)\">Next</a>\r\n </li>\r\n </ul>\r\n </nav>\r\n </div>\r\n
-            <p class=\ "tournaments-history-text\">Tournaments are set to auto-complete once all positions have set a score or 24\r\n hours after the\r\n first entry is placed. If not all positions within a tournament have been filled after the 24\r\n hour period then prizes will be paid at
-                a percentage of the total prize pot, dependent on the\r\n number of entrants.</p>\r\n </div>\r\n\r\n\r\n
-        <!-- tournaments history - Tournament Played -->\r\n
-        <div class=\ "history-box w-100 col-12 tournament-played\">\r\n
-            <div class=\ "d-flex justify-content-between align-items-center mb-3\">\r\n
-                <h4 class=\ "mb-0\">King And Queen Tournament (#53948) - History Details</h4>\r\n <a href=\ "javascript:void(0)\"><button class=\"rectangle-btn position-static \">BACK</button></a>\r\n </div>\r\n
-            <div class=\ "table-responsive\">\r\n\r\n
-                <table class=\ "table text-left user-table\">\r\n
-                    <thead class=\ "\">\r\n
-                        <tr>\r\n
-                            <th scope=\ "col\">POSITION</th>\r\n
-                            <th scope=\ "col\">NAME</th>\r\n
-                            <th scope=\ "col\">SCORE</th>\r\n
-                            <th scope=\ "col\">AMOUNT</th>\r\n </tr>\r\n </thead>\r\n
-                    <tbody>\r\n
-                        <tr>\r\n
-                            <td>1</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>2</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>3</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>4</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>5</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>6</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>7</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>8</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>9</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n
-                        <tr>\r\n
-                            <td>10</td>\r\n
-                            <td>Some Tournament</td>\r\n
-                            <td>5,910</td>\r\n
-                            <td>13,500 Credits</td>\r\n </tr>\r\n\r\n </tbody>\r\n </table>\r\n </div>\r\n\r\n
-            <div class=\ "mx-auto d-flex flex-column flex-sm-row justify-content-center my-4\">\r\n <button class=\ "rectangle-btn btn-play mx-3\">PLAY AGAIN</button>\r\n <button class=\ "rectangle-btn btn-more mx-3\">MORE TOURNAMENTS</button>\r\n </div>\r\n </div>\r\n\r\n
-        <!-- tournament history Entered Name -->\r\n
-        <div class=\ "entered-game\">\r\n
-            <div class=\ "col-12 pt-1 pb-3\">\r\n <a href=\ "javascript:void(0)\"><img class=\"img-fluid\" src=\"assets/img/Tables_GAME_Rectangle.jpg\" alt=\"Entered Game\"></a>\r\n </div>\r\n\r\n
-            <div class=\ "entered-game-info col-12 px-3 py-2\">\r\n
-                <h5 class=\ "red-colored mb-3\">KING & QUEEN - 27,000 - 10 PLAYERS</h5>\r\n
-                <div class=\ "d-flex flex-column flex-sm-row text-center text-sm-left justify-content-between\">\r\n
-                    <div>\r\n
-                        <p>Entry Cost <span class=\ "entry-cost\">3,000</span></p>\r\n
-                        <p>Prize Pool <span class=\ "prize-pool\">27,000</span></p>\r\n </div>\r\n
-                    <div class=\ "\">\r\n
-                        <p class=\ "pl-joined\">Players Joined: <span class=\ "players-joined\">3/10</span></p>\r\n
-                        <p>TOURNAMENT ID: <span class=\ "tournament-id\">54035</span></p>\r\n </div>\r\n </div>\r\n <button class=\ "rectangle-btn btn-play mx-auto d-block\">PLAY NOW</button>\r\n\r\n
-                <div class=\ "table-responsive\">\r\n
-                    <table class=\ "table table-borderless mb-0 home-table\">\r\n
-                        <thead>\r\n
-                            <tr>\r\n
-                                <th scope=\ "col\" colspan=\ "2\">PRIZES</th>\r\n </tr>\r\n </thead>\r\n
-                        <tbody>\r\n
-                            <tr>\r\n
-                                <th scope=\ "row\">1st</th>\r\n
-                                <td>13,500</td>\r\n </tr>\r\n
-                            <tr>\r\n
-                                <th scope=\ "row\">2st</th>\r\n
-                                <td>10,125</td>\r\n </tr>\r\n
-                            <tr>\r\n
-                                <th scope=\ "row\">3st</th>\r\n
-                                <td>3,375</td>\r\n </tr>\r\n </tbody>\r\n </table>\r\n </div>\r\n
-                <p class=\ "about\">Tournaments are set to auto-complete once all positions have set a score or 24 hours after the\r\n first entry is placed. If not all positions within a tournament have been filled after the 24 hour period then\r\n prizes will be paid at
-                    a percentage of the total prize pot, dependent on the number of entrants.</p>\r\n </div>\r\n </div>\r\n\r\n
-        <!-- tournament Entered Game - Played -->\r\n
-        <div class=\ "entered-game-played col-12 px-3 py-2\">\r\n\r\n
-            <div class=\ "d-flex justify-content-between align-items-center mb-0 flex-wrap\">\r\n
-                <h5 class=\ "red-colored mb-0 my-2\">KING & QUEEN - 27,000 - 10 PLAYERS</h5>\r\n
-                <div class=\ "score-n-time d-flex flex-wrap\">\r\n
-                    <div class=\ "game-played-score played-box my-2\">Score <span class=\ "gp-score\">0,000</span></div>\r\n
-                    <div class=\ "game-played-time played-box my-2 ml-sm-3\">Time <span class=\ "gp-time\">24:5</span></div>\r\n </div>\r\n </div>\r\n
-            <p class=\ "my-2\">TOURNAMENT ID: <span class=\ "tournament-id\">54035</span></p>\r\n
-            <div class=\ "col-12 pt-1 pb-3\">\r\n <a href=\ "javascript:void(0)\"><img class=\"img-fluid\" src=\"assets/img/Tables_GAME_Played.jpg\" alt=\"Entered Game\"></a>\r\n </div>\r\n </div>\r\n\r\n\r\n </div>\r\n
-    <!-- Credit Cards -->\r\n
-    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"
+<div class="container content-wrapper">
+    <!-- Tournaments / change content adding classes: invite-only, history, help-->
+    <div class="row tournaments">
+        <div class="col-12">
+            <h2 class="main-heading first-heading">WELCOME TO LIVE! <span class="mobile-hide">SOCIAL CASINO</span>
+                <span class="tablet-hide">, WHERE WE ARE ALWAYS ON!</span>
+            </h2> </div>
+        <div class="col-12">
+            <h2 class="main-heading">SLOTS TOURNAMENTS</h2>
+            <div class="tournaments-menu mx-auto d-flex justify-content-center mt-2 mb-4"> <a class="button tournaments-btn all-btn"  [routerLinkActive]="['active','']" [routerLink]="['/tournaments/all']">ALL</a> <a class="button tournaments-btn invite-only-btn"  [routerLinkActive]=
+                    "['active','']" [routerLink]="['/tournaments/invite']"> INVITE ONLY </a> <a class="button tournaments-btn history-btn" [routerLinkActive]="['active','']" [routerLink]="['/tournaments/history']">TOURNAMENT HISTORY</a>
+                <a [routerLink]="['/tournaments/help']"  [routerLinkActive]="['active','']" class="button tournaments-btn help-btn"> HELP </a> </div> </div>
+        <router-outlet></router-outlet>
+        <!-- tournament history -->
+        <div class="history-box w-100 col-12">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">Tournament history</h4> <a href="javascript:void(0)"><button class="rectangle-btn position-static ">BACK</button></a> </div>
+            <div class="table-responsive">
+                <table class="table text-left user-table">
+                    <thead class="">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">START TIME</th>
+                            <th scope="col">END TIME</th>
+                            <th scope="col">STATUS</th> </tr> </thead>
+                    <tbody>
+                        <tr>
+                            <!-- no-tournament-history td -->
+                            <td colspan="5">There is no tournament history.</td> </tr>
+                        <tr>
+                            <td>53766</td>
+                            <td>Full Moon Diamond Tournament</td>
+                            <td>06-20-2019 - 08:18:14 EDT</td>
+                            <td> </td>
+                            <td><a href="javascript:void(0)">In Play</a></td> </tr>
+                        <tr>
+                            <td>53766</td>
+                            <td><a href="javascript:void(0)">King And Queen Tournament</a></td>
+                            <td>06-20-2019 - 08:18:14 EDT</td>
+                            <td>06-20-2019 - 08:18:14 EDT</td>
+                            <td>Completed</td> </tr>
+                        <tr>
+                            <td>53766</td>
+                            <td><a href="javascript:void(0)">Full Moon Diamond Tournament</a></td>
+                            <td>06-20-2019 - 08:18:14 EDT</td>
+                            <td>06-20-2019 - 08:18:14 EDT</td>
+                            <td>Completed</td> </tr> </tbody> </table> </div>
+            <div class="pagination-wrapper"> <span>Page</span>
+                <nav aria-label="..." class="d-inline-block ml-5">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled"> <span class="page-link">Previous</span> </li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                        <li class="page-item active" aria-current="page"> <span class="page-link">                2                <span class="sr-only">(current)</span> </span> </li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                        <li class="page-item"> <a class="page-link" href="javascript:void(0)">Next</a> </li> </ul> </nav> </div>
+            <p class="tournaments-history-text">Tournaments are set to auto-complete once all positions have set a score or 24 hours after the first entry is placed. If not all positions within a tournament have been filled after the 24 hour period then prizes will be paid at
+                a percentage of the total prize pot, dependent on the number of entrants.</p> </div>
+        <!-- tournaments history - Tournament Played -->
+        <div class="history-box w-100 col-12 tournament-played">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">King And Queen Tournament (#53948) - History Details</h4> <a href="javascript:void(0)"><button class="rectangle-btn position-static ">BACK</button></a> </div>
+            <div class="table-responsive">
+                <table class="table text-left user-table">
+                    <thead class="">
+                        <tr>
+                            <th scope="col">POSITION</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">SCORE</th>
+                            <th scope="col">AMOUNT</th> </tr> </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Some Tournament</td>
+                            <td>5,910</td>
+                            <td>13,500 Credits</td> </tr> </tbody> </table> </div>
+            <div class="mx-auto d-flex flex-column flex-sm-row justify-content-center my-4"> <button class="rectangle-btn btn-play mx-3">PLAY AGAIN</button> <button class="rectangle-btn btn-more mx-3">MORE TOURNAMENTS</button> </div> </div>
+        <!-- tournament history Entered Name -->
+        <div class="entered-game">
+            <div class="col-12 pt-1 pb-3"> <a href="javascript:void(0)"><img class="img-fluid" src="assets/img/Tables_GAME_Rectangle.jpg" alt="Entered Game"></a> </div>
+            <div class="entered-game-info col-12 px-3 py-2">
+                <h5 class="red-colored mb-3">KING & QUEEN - 27,000 - 10 PLAYERS</h5>
+                <div class="d-flex flex-column flex-sm-row text-center text-sm-left justify-content-between">
+                    <div>
+                        <p>Entry Cost <span class="entry-cost">3,000</span></p>
+                        <p>Prize Pool <span class="prize-pool">27,000</span></p> </div>
+                    <div class="">
+                        <p class="pl-joined">Players Joined: <span class="players-joined">3/10</span></p>
+                        <p>TOURNAMENT ID: <span class="tournament-id">54035</span></p> </div> </div> <button class="rectangle-btn btn-play mx-auto d-block">PLAY NOW</button>
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 home-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2">PRIZES</th> </tr> </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1st</th>
+                                <td>13,500</td> </tr>
+                            <tr>
+                                <th scope="row">2st</th>
+                                <td>10,125</td> </tr>
+                            <tr>
+                                <th scope="row">3st</th>
+                                <td>3,375</td> </tr> </tbody> </table> </div>
+                <p class="about">Tournaments are set to auto-complete once all positions have set a score or 24 hours after the first entry is placed. If not all positions within a tournament have been filled after the 24 hour period then prizes will be paid at
+                    a percentage of the total prize pot, dependent on the number of entrants.</p> </div> </div>
+        <!-- tournament Entered Game - Played -->
+        <div class="entered-game-played col-12 px-3 py-2">
+            <div class="d-flex justify-content-between align-items-center mb-0 flex-wrap">
+                <h5 class="red-colored mb-0 my-2">KING & QUEEN - 27,000 - 10 PLAYERS</h5>
+                <div class="score-n-time d-flex flex-wrap">
+                    <div class="game-played-score played-box my-2">Score <span class="gp-score">0,000</span></div>
+                    <div class="game-played-time played-box my-2 ml-sm-3">Time <span class="gp-time">24:5</span></div> </div> </div>
+            <p class="my-2">TOURNAMENT ID: <span class="tournament-id">54035</span></p>
+            <div class="col-12 pt-1 pb-3"> <a href="javascript:void(0)"><img class="img-fluid" src="assets/img/Tables_GAME_Played.jpg" alt="Entered Game"></a> </div> </div> </div>
+    <!-- Credit Cards -->
+    <app-credit-cards></app-credit-cards></div>

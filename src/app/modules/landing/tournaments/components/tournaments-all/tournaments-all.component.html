@@ -1,17 +1,17 @@
-module.exports = "
-<div class=\ "tournaments-text mb-4\">\r\n
-    <p>Welcome to the competitive world of Slots Tournaments!</p>\r\n
-    <p>Choose one of the exciting tournament games below and then pick a tournament to compete\r\n within.\r\n Everyone has the same chance to win so get started and play to top the leaderboard and come\r\n away\r\n with 1st Prize.</p>\r\n</div>\r\n
+
+<div class="tournaments-text mb-4">
+    <p>Welcome to the competitive world of Slots Tournaments!</p>
+    <p>Choose one of the exciting tournament games below and then pick a tournament to compete within. Everyone has the same chance to win so get started and play to top the leaderboard and come away with 1st Prize.</p></div>
 <div
-    class=\ "tournaments-games-box col-12 pt-1 pb-5\">\r\n
-    <div class=\ "d-flex align-items-start justify-content-between\">\r\n <button class=\ "left-arrow l-r-arrows border-0 bg-transparent\"><img src=\"assets/img/Left_Red_Arrow.svg\"\r\n              alt=\"\"></button>\r\n
-        <div class=\ "overflow-box\">\r\n \r\n
-            <div class=\ "tournaments-slides d-flex justify-content-between\" \r\n>\r\n
-                <div class=\ "tour-slide-box col-6 col-sm-4 col-md-3\" \r\n *ngFor=\ "let tournament of tournaments\">\r\n
-                    <div class=\ "tour-slide\">\r\n
-                        <div class=\ "tournament-info text-center\">\r\n {{ tournament.tournamentInfo }} <br>\r\n
-                            <div class=\ "entry-cost\">\r\n
-                                <div> Entry Cost {{ tournament.entryCost | number }}</div>\r\n </div>\r\n
-                            <div> PRIZE POOL {{ tournament.prizePool | number }}</div>\r\n </div> \r\n <img class=\ "w-100 img-fluid\" \r\n [src]=\ "tournament.tournamentImage\" alt=\ "\">\r\n <button class=\ "d-block see-more-btn mx-auto tournaments-btn\"\r\n
-                            (click)=\ "seeTournamentDetails(tournament)\">\r\n                          <span *ngIf=\"tournament.id!=activeTournament?.id\">SEE MORE</span>\r\n                          <span *ngIf=\"tournament.id==activeTournament?.id\">CLOSE</span>\r\n                        </button>                        \r\n </div>\r\n </div>\r\n </div>\r\n
-            <app-tournament-see-more \r\n *ngIf=\ "openTournamentDetails\"\r\n [tournament]=\ "tournamentDetails\">\r\n </app-tournament-see-more>\r\n </div>\r\n \r\n \r\n <button class=\ "right-arrow l-r-arrows border-0 bg-transparent\"><img src=\"assets/img/Right_Red_Arrow.svg\"\r\n              alt=\"\"></button>\r\n </div>\r\n \r\n </div>"
+    class="tournaments-games-box col-12 pt-1 pb-5">
+    <div class="d-flex align-items-start justify-content-between"> <button class="left-arrow l-r-arrows border-0 bg-transparent"><img src="assets/img/Left_Red_Arrow.svg"              alt=""></button>
+        <div class="overflow-box">
+            <div class="tournaments-slides d-flex justify-content-between" >
+                <div class="tour-slide-box col-6 col-sm-4 col-md-3"  *ngFor="let tournament of tournaments">
+                    <div class="tour-slide">
+                        <div class="tournament-info text-center"> {{ tournament.tournamentInfo }} <br>
+                            <div class="entry-cost">
+                                <div> Entry Cost {{ tournament.entryCost | number }}</div> </div>
+                            <div> PRIZE POOL {{ tournament.prizePool | number }}</div> </div>  <img class="w-100 img-fluid"  [src]="tournament.tournamentImage" alt=""> <button class="d-block see-more-btn mx-auto tournaments-btn"
+                            (click)="seeTournamentDetails(tournament)">                          <span *ngIf="tournament.id!=activeTournament?.id">SEE MORE</span>                          <span *ngIf="tournament.id==activeTournament?.id">CLOSE</span>                        </button>                         </div> </div> </div>
+            <app-tournament-see-more  *ngIf="openTournamentDetails" [tournament]="tournamentDetails"> </app-tournament-see-more> </div>   <button class="right-arrow l-r-arrows border-0 bg-transparent"><img src="assets/img/Right_Red_Arrow.svg"              alt=""></button> </div>  </div>

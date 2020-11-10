@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { LiveRewardsCard, TitleEnum } from 'src/app/core/models/entities/profile';
 
-
 @Component({
   selector: 'app-user-account-rewards',
   templateUrl: './user-account-rewards.component.html',

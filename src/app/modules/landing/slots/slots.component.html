@@ -1,28 +1,27 @@
-module.exports = "
-<!-- Slots -->\r\n
-<div class=\ "container content-wrapper\">\r\n
-    <div class=\ "row slots\">\r\n
-        <div class=\ "col-12\">\r\n
-            <h2 class=\ "main-heading\">WELCOME TO LIVE! <span class=\ "mobile-hide\">SOCIAL CASINO</span><span class=\ "tablet-hide\">, WHERE WE ARE\r\n          ALWAYS ON!</span></h2>\r\n </div>\r\n
-        <!-- Slots game big -->\r\n
-        <div class=\ "slots-game-big col-12 d-flex justify-content-between pt-1 pb-4\">\r\n <img class=\ "img-fluid\" \r\n src=\ "assets/img/VIP_GAME_Sign_Up_Rectangle3.jpg\" \r\n alt=\ "VIP_GAME\">\r\n <a [routerLink]=\ "['../games/china-shores']\" \r\n class=\ "button rectangle-btn\">\r\n         LEARN MORE\r\n      </a>\r\n </div>\r\n
-        \r\n
-        <div class=\ "col-12\">\r\n
-            <h2 class=\ "main-heading\">SLOTS</h2>\r\n
-            <p>Crazy about free online slots? Live! Casino has a range of world exclusive slots straight from the casino\r\n floor. Whether you have a favourite, can’t make it to the casino or want to try new slots, we have a huge range.\r\n We update new
-                games online every month so make sure you come back and be one of the first to try!</p>\r\n </div>\r\n
-        <div class=\ "col-12\">\r\n
-            <div class=\ "slots-menu\">\r\n
-                <ul class=\ "d-flex text-center w-100\">\r\n
-                    <li [ngClass]=\ "{'active': filterGroup=='all'}\"><a (click)=\ "filterSlots('all')\">ALL</a></li>\r\n
-                    <li [ngClass]=\ "{'active': filterGroup=='new'}\"><a (click)=\ "filterSlots('new')\">NEW</a></li>\r\n
-                    <li [ngClass]=\ "{'active': filterGroup=='0'}\"><a (click)=\ "filterSlots('0')\">1-10 Lines</a></li>\r\n
-                    <li [ngClass]=\ "{'active': filterGroup=='10'}\"><a (click)=\ "filterSlots('10')\">10-20 Lines</a></li>\r\n
-                    <li [ngClass]=\ "{'active': filterGroup=='20'}\"><a (click)=\ "filterSlots('20')\">20+ Lines</a></li>\r\n </ul>\r\n </div>\r\n </div>\r\n
-        <!-- Slots game box -->\r\n
-        <div class=\ "slots-games-box col-12 py-1\">\r\n
-            <div class=\ "row\">\r\n <a *ngFor=\ "let slot of allSlots | gamelinesfilter:filterArgs\"\r\n class=\ "col-6 col-sm-3 single-slot vip-star\"\r\n [ngClass]=\ "{'new-label': slot.isNewGame, 'vip-star': slot.isVipGame}\"\r\n [routerLink]=\
-                    "['/games/', slot.routeLink]\">\r\n        <img class=\"img-fluid\" \r\n            [src]=\"slot.image\"\r\n            alt=\"VIP_GAME\">\r\n          <div class=\"black-label red-label\">{{ slot.name }}</div>\r\n        </a>\r\n </div>\r\n\r\n </div>\r\n\r\n\r\n
-        </div>\r\n
-    <!-- Credit Cards -->\r\n
-    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"
+
+<div class="container content-wrapper">
+    <div class="row slots">
+        <div class="col-12">
+            <h2 class="main-heading">WELCOME TO LIVE! <span class="mobile-hide">SOCIAL CASINO</span><span class="tablet-hide">, WHERE WE ARE          ALWAYS ON!</span></h2> </div>
+        <!-- Slots game big -->
+        <div class="slots-game-big col-12 d-flex justify-content-between pt-1 pb-4"> <img class="img-fluid"  src="assets/img/VIP_GAME_Sign_Up_Rectangle3.jpg"  alt="VIP_GAME"> <a [routerLink]="['../games/china-shores']"  class="button rectangle-btn">         LEARN MORE      </a> </div>
+
+        <div class="col-12">
+            <h2 class="main-heading">SLOTS</h2>
+            <p>Crazy about free online slots? Live! Casino has a range of world exclusive slots straight from the casino floor. Whether you have a favourite, can’t make it to the casino or want to try new slots, we have a huge range. We update new
+                games online every month so make sure you come back and be one of the first to try!</p> </div>
+        <div class="col-12">
+            <div class="slots-menu">
+                <ul class="d-flex text-center w-100">
+                    <li [ngClass]="{'active': filterGroup=='all'}"><a (click)="filterSlots('all')">ALL</a></li>
+                    <li [ngClass]="{'active': filterGroup=='new'}"><a (click)="filterSlots('new')">NEW</a></li>
+                    <li [ngClass]="{'active': filterGroup=='0'}"><a (click)="filterSlots('0')">1-10 Lines</a></li>
+                    <li [ngClass]="{'active': filterGroup=='10'}"><a (click)="filterSlots('10')">10-20 Lines</a></li>
+                    <li [ngClass]="{'active': filterGroup=='20'}"><a (click)="filterSlots('20')">20+ Lines</a></li> </ul> </div> </div>
+        <!-- Slots game box -->
+        <div class="slots-games-box col-12 py-1">
+            <div class="row"> <a *ngFor="let slot of allSlots | gamelinesfilter:filterArgs" class="col-6 col-sm-3 single-slot vip-star" [ngClass]="{'new-label': slot.isNewGame, 'vip-star': slot.isVipGame}" [routerLink]=
+                    "['/games/', slot.routeLink]">        <img class="img-fluid"             [src]="slot.image"            alt="VIP_GAME">          <div class="black-label red-label">{{ slot.name }}</div>        </a> </div> </div>
+        </div>
+    <!-- Credit Cards -->
+    <app-credit-cards></app-credit-cards></div>

@@ -1,33 +1,32 @@
-module.exports = "
-<div class=\ "user-styles pt-4 pt-sm-5 payment\">\r\n
-    <div class=\ "row\">\r\n
-        <div class=\ "col-12 d-flex flex-column flex-md-row mb-5\">\r\n
-            <div class=\ "d-flex flex-column justify-content-between \">\r\n
-                <h3 class=\ "mb-4\">Payment Information</h3>\r\n
-                <div class=\ "asterisk-marked red-colored pb-3\">Fields marked with a red asterisk ( * ) are mandatory</div>\r\n\r\n </div>\r\n\r\n
-            <app-payment-package class=\ "payment-package-component\"></app-payment-package>\r\n\r\n </div>\r\n\r\n\r\n
-        <div class=\ "col-12\">\r\n
-            <div class=\ "account-form d-md-flex my-4\">\r\n\r\n\r\n
-                <div class=\ "col-12\">\r\n
-                    <div class=\ "payment-form-steps d-flex justify-content-center w-100\">\r\n\r\n
-                        <div class=\ "form-step-one\">\r\n
-                            <div class=\ "circle-wrapper\">\r\n
-                                <div class=\ "red-circle\" [ngClass]=\ "{'active': stepProv==1}\">1</div>\r\n </div>\r\n
-                            <p>Personal Details</p>\r\n </div>\r\n\r\n
-                        <div class=\ "form-step-two\">\r\n
-                            <div class=\ "circle-wrapper\">\r\n
-                                <div class=\ "red-circle\" [ngClass]=\ "{'active': stepProv==2}\">2</div>\r\n </div>\r\n
-                            <p>Card Details</p>\r\n </div>\r\n\r\n
-                        <div class=\ "form-step-three\">\r\n
-                            <div class=\ "circle-wrapper\">\r\n
-                                <div class=\ "red-circle\" [ngClass]=\ "{'active': stepProv==3}\">3</div>\r\n </div>\r\n
-                            <p>Address Details</p>\r\n </div>\r\n\r\n </div>\r\n
-                    <div class=\ "row\">\r\n
-                        <div class=\ "step-one px-0 col-12 col-md-7\" [ngClass]=\ "{'d-none': stepProv!=1}\">\r\n
-                            <app-personal-details (passEntry)=\ "setPersonalDetails($event)\" [personalizeAccount]=\ "personalInformation\"></app-personal-details>\r\n </div>\r\n
-                        <div class=\ "step-two px-0 col-12 col-md-7\" [ngClass]=\ "{'d-none': stepProv!=2}\">\r\n
-                            <app-card-details (passEntry)=\ "setCardDetails($event)\" [creditCard]=\ "cardDetailsData\"></app-card-details>\r\n </div>\r\n
-                        <div class=\ "step-three col-12 col-md-7 px-0\" [ngClass]=\ "{'d-none': stepProv!=3}\">\r\n
-                            <app-address-details (passEntry)=\ "setAddressDetails($event)\" [addressDetails]=\ "addressDetailsData\"></app-address-details>\r\n </div>\r\n
-                        <app-user-need-help></app-user-need-help>\r\n </div>\r\n </div>\r\n\r\n </div>\r\n </div>\r\n </div>\r\n
-    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"
+<div class="user-styles pt-4 pt-sm-5 payment">
+    <div class="row">
+        <div class="col-12 d-flex flex-column flex-md-row mb-5">
+            <div class="d-flex flex-column justify-content-between ">
+                <h3 class="mb-4">Payment Information</h3>
+                <div class="asterisk-marked red-colored pb-3">Fields marked with a red asterisk ( * ) are mandatory</div> </div>
+            <app-payment-package class="payment-package-component"></app-payment-package> </div>
+        <div class="col-12">
+            <div class="account-form d-md-flex my-4">
+                <div class="col-12">
+                    <div class="payment-form-steps d-flex justify-content-center w-100">
+                        <div class="form-step-one">
+                            <div class="circle-wrapper">
+                                <div class="red-circle" [ngClass]="{'active': stepProv==1}">1</div> </div>
+                            <p>Personal Details</p> </div>
+                        <div class="form-step-two">
+                            <div class="circle-wrapper">
+                                <div class="red-circle" [ngClass]="{'active': stepProv==2}">2</div> </div>
+                            <p>Card Details</p> </div>
+                        <div class="form-step-three">
+                            <div class="circle-wrapper">
+                                <div class="red-circle" [ngClass]="{'active': stepProv==3}">3</div> </div>
+                            <p>Address Details</p> </div> </div>
+                    <div class="row">
+                        <div class="step-one px-0 col-12 col-md-7" [ngClass]="{'d-none': stepProv!=1}">
+                            <app-personal-details (passEntry)="setPersonalDetails($event)" [personalizeAccount]="personalInformation"></app-personal-details> </div>
+                        <div class="step-two px-0 col-12 col-md-7" [ngClass]="{'d-none': stepProv!=2}">
+                            <app-card-details (passEntry)="setCardDetails($event)" [creditCard]="cardDetailsData"></app-card-details> </div>
+                        <div class="step-three col-12 col-md-7 px-0" [ngClass]="{'d-none': stepProv!=3}">
+                            <app-address-details (passEntry)="setAddressDetails($event)" [addressDetails]="addressDetailsData"></app-address-details> </div>
+                        <app-user-need-help></app-user-need-help> </div> </div> </div> </div> </div>
+    <app-credit-cards></app-credit-cards></div>
