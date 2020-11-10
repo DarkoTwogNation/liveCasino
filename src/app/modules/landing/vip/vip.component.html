@@ -1,0 +1,20 @@
+module.exports = "
+<!-- Vip -->\r\n
+<div class=\ "container content-wrapper\">\r\n
+    <div class=\ "row vip\">\r\n
+        <div class=\ "col-12\">\r\n
+            <h2 class=\ "main-heading\">WELCOME TO LIVE! <span class=\ "mobile-hide\">SOCIAL CASINO</span><span class=\ "tablet-hide\">, WHERE WE ARE\r\n          ALWAYS ON!</span></h2>\r\n </div>\r\n
+        <!-- Vip game big -->\r\n
+        <div class=\ "vip-game-big col-12 d-flex justify-content-between pt-1 pb-4 position-relative\">\r\n <img class=\ "img-fluid\" \r\n src=\ "assets/img/VIP_GAME_Sign_Up_Rectangle2.jpg\" \r\n alt=\ "VIP_GAME\">\r\n <a [routerLink]=\ "['../games/gambling-bug']\" \r\n class=\ "button rectangle-btn\">PLAY NOW</a>\r\n </div>\r\n\r\n
+        <div class=\
+            "col-12\">\r\n
+            <h2 class=\ "main-heading\">VIP</h2>\r\n
+            <p>Welcome to the Live! Casino VIP Slots. Love China Shores, EZ Baccarat and Total Meltdown slots?\r\n Straight from the casino floor we have adapted these games to play online.</p>\r\n
+            <p>These exclusive slots are only unlocked to our VIP members and you must have $20,000 virtual\r\n credits or more to be eligible.\r\n You can <a [routerLink]=\ "['/buy-credits']\">buy virtual credits</a> online today so you can unlock these
+                hot casino\r\n slots.</p>\r\n </div>\r\n\r\n
+        <!-- Vip game box -->\r\n
+        <div class=\ "vip-games-box col-12 py-1\">\r\n
+            <div class=\ "row\"> \r\n <a *ngFor=\ "let game of vipGames\" \r\n [routerLink]=\ "['/games/', game.routeLink]\" \r\n class=\ "col-6 col-sm-4 col-md-3  vip-star\">\r\n            <img class=\"img-fluid\" \r\n                 [src]=\"game.image\"\r\n                 alt=\"VIP_GAME\">\r\n          <div class=\"black-label red-label\">{{ game.name }}</div>\r\n        </a>\r\n
+                </div>\r\n </div>\r\n </div>\r\n
+    <!-- Credit Cards -->\r\n
+    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"

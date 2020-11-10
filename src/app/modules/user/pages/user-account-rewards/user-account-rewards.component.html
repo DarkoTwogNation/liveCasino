@@ -1,0 +1,25 @@
+module.exports = "
+<div class=\ "user-styles pt-5 rewards\">\r\n
+    <div class=\ "row\">\r\n
+        <div class=\ "col-12 d-flex flex-column flex-md-row mb-0 mb-md-5\">\r\n
+            <div class=\ "d-flex flex-column justify-content-between \">\r\n
+                <h3 class=\ "mb-4\">Live Rewards Card</h3>\r\n
+                <div class=\ "red-colored pb-3\">Fields marked with a red asterisk ( * ) are mandatory</div>\r\n\r\n </div>\r\n
+            <div class=\ "ml-md-auto receive-points\">\r\n
+                <div class=\ "receive-content\">\r\n RECEIVE UP TO 15,000 LIVE! REWARDS CARD POINTS EACH WEEK\r\n </div>\r\n </div>\r\n </div>\r\n\r\n
+        <div class=\ "col-12\">\r\n
+            <div class=\ "account-form d-md-flex my-5\">\r\n
+                <form [formGroup]=\ "liveRewardsForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onLinkAccount()\" class=\ "form-inline col-12 col-md-7 px-0\">\r\n <label for=\ "title\" class=\ "d-block text-right\">LIVE REWARDS CARD ID <span class=\"red-colored ml-0 mr-2\"> *</span></label>\r\n <input type=\ "text\" formControlName=\ "cardId\" class=\ "form-control\" id=\ "title\">\r\n
+                    <div
+                        class=\ "add-info\" *ngIf=\ "cardId.invalid && (cardId.dirty || cardId.touched)\">\r\n
+                        <div *ngIf=\ "cardId.errors.required\">This field is reqiured</div>\r\n
+                        <div *ngIf=\ "cardId.errors.minlength\">The minimum length is 3 characters</div>\r\n
+                        <div *ngIf=\ "cardId.errors.pattern\">This field must contain numbers only</div>\r\n </div>\r\n\r\n <label for=\ "last-name\" class=\ "d-block text-right\">LAST NAME <span class=\"red-colored ml-0 mr-2\">\r\n                    *</span></label>\r\n <input type=\
+                "text\" formControlName=\ "lastName\" class=\ "form-control\" id=\ "last-name\">\r\n
+            <div class=\ "add-info\" *ngIf=\ "lastName.invalid && (lastName.dirty || lastName.touched)\">\r\n
+                <div *ngIf=\ "lastName.errors.required\">This field is reqiured</div>\r\n
+                <div *ngIf=\ "lastName.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n
+            <app-date-picker [parentForm]=\ "liveRewardsForm\"></app-date-picker>\r\n\r\n\r\n <button [disabled]=\ "liveRewardsForm.invalid\" type=\ "submit\" class=\ "user-btn my-5\">LINK ACCOUNT</button>\r\n </form>\r\n
+            <!-- PLACE FOR USER-NEED-HELP -->\r\n
+            <app-user-need-help></app-user-need-help>\r\n </div>\r\n </div>\r\n </div>\r\n
+<app-credit-cards></app-credit-cards>\r\n </div>\r\n\r\n"

@@ -1,0 +1,240 @@
+.content-wrapper {
+  padding: 21px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.66);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.66);
+  background-color: #ffffff;
+}
+
+.arrow-btn {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.arrow-btn .button {
+  font-family: "Helvetica Neue LT W05 95 Black";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: black;
+  bottom: 10px;
+  background-color: #fdb900;
+  padding: 0 25px;
+  line-height: 42px;
+  border-radius: 21px;
+  font-size: 22px;
+}
+.arrow-btn .button .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.black-label {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 10px;
+  margin-bottom: 14px;
+}
+
+.red-label {
+  background-color: #ff0000;
+  line-height: 30px;
+  height: 30px;
+}
+
+.img-fluid {
+  min-width: 100%;
+}
+
+.i-info {
+  position: relative;
+  top: -7px;
+  left: 17px;
+  min-width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  font-size: 17px;
+  line-height: 21px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.i-info:hover + .i-add-info {
+  opacity: 1;
+  display: block;
+}
+
+.i-add-info {
+  display: none;
+  opacity: 0;
+}
+
+.pagination-wrapper span {
+  font-size: 15px;
+}
+.pagination-wrapper .pagination {
+  border: 0;
+}
+.pagination-wrapper .pagination .page-item .page-link {
+  border: none;
+  color: #ff0000;
+  text-decoration: underline;
+  font-size: 15px;
+}
+.pagination-wrapper .pagination .page-item.active {
+  background: none;
+}
+.pagination-wrapper .pagination .page-item.active .page-link {
+  background: none;
+  color: #000000;
+}
+
+.live-pagination .ngx-pagination li {
+  border: none;
+  color: #ff0000;
+  text-decoration: underline;
+  font-size: 16px;
+  border: 1px solid #ff0000;
+  margin-right: 8px;
+  text-decoration: none;
+}
+.live-pagination .ngx-pagination li.current {
+  background: #ff0000;
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+}
+.live-pagination .ngx-pagination li.current .page-link {
+  background: none;
+  color: #000000;
+}
+.live-pagination .ngx-pagination li.disabled {
+  display: none;
+}
+.live-pagination .ngx-pagination li a {
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+}
+.live-pagination .ngx-pagination li a:before, .live-pagination .ngx-pagination li a:after {
+  display: none;
+}
+.live-pagination .ngx-pagination li > span:not(:first-child) {
+  line-height: 1;
+}
+
+button[disabled=""],
+a.button[disabled=""] {
+  opacity: 0.6;
+}
+
+button:hover,
+a.button:hover, button:not(.close-btn):hover {
+  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+a.button:active {
+  transform: translateY(1px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:focus,
+a.button:focus {
+  outline: none;
+}
+
+button[disabled=""]:hover,
+a.button[disabled]:hover, button.close-btn:hover, button.l-r-arrows:hover {
+  box-shadow: none;
+}
+
+a.button:hover, a.red-colored:hover, a.red-colored:active {
+  color: initial;
+}
+
+a.a-modal {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .tablet-hide {
+    display: none;
+  }
+
+  .black-label {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .red-label {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-heading {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .content-wrapper {
+    padding: 12px 12px 21px 12px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+}
+.featured-games {
+  margin-bottom: 21px;
+}
+.featured-games .featured-game:first-of-type {
+  padding-right: 7px;
+}
+.featured-games .featured-game:last-of-type {
+  padding-left: 7px;
+}
+.featured-games .featured-game .rectangle-btn {
+  padding: 0px 10px;
+  line-height: 22px;
+  font-size: 12px;
+  right: 3%;
+  bottom: 13px;
+}
+
+@media screen and (max-width: 576px) {
+  .featured-games .featured-game:first-of-type {
+    padding-right: 1rem;
+  }
+  .featured-games .featured-game:last-of-type {
+    padding-left: 1rem;
+  }
+  .featured-games .featured-game .rectangle-btn {
+    padding: 0px 10px;
+    line-height: 22px;
+    font-size: 12px;
+    right: 3%;
+    bottom: 13px;
+  }
+}

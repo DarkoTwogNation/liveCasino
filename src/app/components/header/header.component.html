@@ -1,0 +1,120 @@
+
+<!-- HEADER  -->
+<header [ngClass]="{'logged-in': authService.isLoggedIn}">
+    <div class="container d-flex h-100 pr-0"> <a href="javascript:void(0)" class="logo-link align-self-center">      <h1><img src="assets/img/Live_Logo.png" alt="Live Casino logo"></h1>    </a>
+        <div class=
+            "header-links d-flex flex-column align-self-center align-self-md-end">
+            <div class="header-login ml-md-auto">
+                <div class="logged-in-btns">
+                    <div class="user-menu">
+                        <div class="dropdown"> <button class="d-flex btn btn-secondary dropdown-toggle text-left" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                {{clientUsername}}              </button>
+                            <div class="dropdown-menu" aria-labelledby="userDropdown"> <button class="dropdown-item" type="button" [routerLink]="['/user/personalize-account']">Personalize                  Account</button> <button class="dropdown-item" type="button" [routerLink]=
+                                    "['/user/account-balance']">Balance</button> <button class="dropdown-item" type="button" [routerLink]="['/user/account-history']">History</button> <button class="dropdown-item" type="button" [routerLink]=
+                                    "['/user/wagers']">Wagers</button> <button class="dropdown-item" type="button" [routerLink]="['/user/reward']">Live! Rewards Club</button>
+                                <!-- <button class="dropdown-item" type="button" [routerLink]="['/user/account-messages']">My Messages (<span -->
+                                <!-- class="msg-num px-0">0</span>)</button> --> <button class="dropdown-item" type="button" [routerLink]="['/user/account-marketing']">Marketing                  Preferences</button> <button class="dropdown-item" type="button" [routerLink]=
+                                    "['/user/change-password']">Change                  Password</button>
+                                <!-- <button class="dropdown-item refer d-flex align-items-center" type="button"                  [routerLink]="['/user/referral']">Refer a Friend</button> --> <button class="dropdown-item" type="button" (click)="logoutUser()">Log Out</button> </div> </div> </div>
+                    <div class="user-trophy"> <img src="assets/img/trophy-icon.png" alt="trophy-icon" class="show-popover">
+                        <div class="popover-box text-center">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <h4>SLOTS</h4>
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <!-- <a > -->
+                                        <div class="d-flex justify-content-between popover-row" [routerLink]="['/slots']">
+                                            <div class="w-50">HOURLY</div>
+                                            <div class="w-50">Play</div> </div>
+                                        <div class="d-flex justify-content-between popover-row" [routerLink]="['/slots']">
+                                            <div class="w-50">DAILY</div>
+                                            <div class="w-50">Play</div> </div>
+                                        <div class="d-flex justify-content-between popover-row" [routerLink]="['/slots']">
+                                            <div class="w-50">WEEKLY</div>
+                                            <div class="w-50">Play</div> </div>
+                                        <!-- </a> --> </div> </div>
+                                <div class="col-6 pl-0 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h4>TABLES</h4>
+                                        <div class="d-flex flex-column justify-content-between h-100 p-0">
+                                            <div class="d-flex justify-content-between popover-row" [routerLink]="['/tables']">
+                                                <div class="w-50">TABLES</div>
+                                                <div class="w-50">Play</div> </div>
+                                            <div class="p-0">
+                                                <div class="popover-row popover-btn"> <a class="w-100" [routerLink]="['/leaderboards']">SEE MORE</a> </div> </div> </div> </div> </div> </div> </div> </div>
+                    <!-- <div class="user-messages" [routerLink]="['user/account-messages']">            <img src="assets/img/chart-icon.png" alt="chart-icon">            <div class="msg-num">0</div>          </div> -->
+                    <div class="user-level"> <img src="assets/img/level-chart-icon.png" alt="level-chart-icon" class="show-popover">
+                        <div class="popover-box text-left p-0">
+                            <div class="d-flex popover-row p-0">
+                                <div class="w-50 px-3 py-2 d-inline">CURRENT LEVEL:</div>
+                                <div class="w-50 px-3 py-2 current-level d-inline">246</div> </div>
+                            <div class="d-flex popover-row p-0">
+                                <div class="w-50 px-3 py-2 d-inline">NEXT LEVEL:</div>
+                                <div class="w-50 px-3 py-2 next-level d-inline">46</div> </div> </div> <span>LEVEL</span>
+                        <div class="level-num">5</div> </div>
+                    <div class="user-collect" [routerLink]="['/games/wheel-of-fortune']"> <img src="assets/img/pie-chart-collect-icon.png" alt="pie-chart-collect-icon">
+                        <div class="collect-label">COLLECT</div> </div>
+                    <div class="user-credits d-flex justify-content-between align-items-center" [routerLink]="['/buy-credits']"> <span class="credit-value">{{userService.creditStatus | number}}</span> <span class="buy-credits">Buy<br>Credits</span> </div> </div>
+                <div class="home-page-btns pr-0 pr-sm-4 pr-lg-0"> <button class="login" [routerLink]="[ {outlets: { modal: 'login' } } ]">LOGIN</button> <button class="sign-up" [routerLink]="[ {outlets: { modal: 'signup' } } ]">SIGN UP</button> </div> </div>
+            <!-- Main Navigation menu -->
+            <div class="main-menu mb-0">
+                <nav class="navbar navbar-expand-md"> <button aria-controls="user-nav-menu" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#user-nav-menu" data-toggle="collapse" type="button">            <span class="navbar-toggler-icon">              <span class="bar-line"></span>              <span class="bar-line"></span>              <span class="bar-line"></span>            </span>          </button>
+                    <div class="collapse navbar-collapse" id="user-nav-menu">
+                        <!-- user-menu-part -->
+                        <div class="main-menu-user-part">
+                            <div class="logged-in-btns">
+                                <div class="user-menu">
+                                    <div class="dropdown"> <button class="d-flex btn btn-secondary dropdown-toggle text-left" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                      CULI46                    </button>
+                                        <div class="dropdown-menu" aria-labelledby="userDropdown"> <button class="dropdown-item" type="button" [routerLink]="['/user/personalize-account']">Personalize                        Account</button> <button class="dropdown-item" type=
+                                                "button" [routerLink]="['/user/account-balance']">Balance</button> <button class="dropdown-item" type="button" [routerLink]="['/user/account-history']">History</button> <button class=
+                                                "dropdown-item" type="button" [routerLink]="['/user/wagers']">Wagers</button> <button class="dropdown-item" type="button" [routerLink]="['/user/reward']">Live! Rewards Club</button> <button class=
+                                                "dropdown-item" type="button" [routerLink]="['/user/account-messages']">My Messages                        (<span class="msg-num px-0">0</span>)</button> <button class="dropdown-item" type="button" [routerLink]=
+                                                "['/user/account-marketing']">Marketing                        Preferences</button> <button class="dropdown-item" type="button" [routerLink]="['/user/change-password']">Change                        Password</button>
+                                            <button class="dropdown-item refer d-flex align-items-center" type="button" [routerLink]="['/user/referral']">Refer aFriend</button> <button class="dropdown-item" type="button" (click)=
+                                                "logoutUser()">Log Out</button> </div> </div> </div>
+                                <div class="user-btn-group d-flex align-items-center">
+                                    <div class="user-trophy"> <img src="assets/img/trophy-icon.png" alt="trophy-icon" class="show-popover">
+                                        <div class="popover-box text-center">
+                                            <div class="row">
+                                                <div class="col-6 pr-0">
+                                                    <h4>SLOTS</h4>
+                                                    <div class="d-flex flex-column justify-content-between">
+                                                        <div class="d-flex justify-content-between popover-row">
+                                                            <div class="w-50">HOURLY</div>
+                                                            <div class="w-50">Play</div> </div>
+                                                        <div class="d-flex justify-content-between popover-row">
+                                                            <div class="w-50">DAILY</div>
+                                                            <div class="w-50">Play</div> </div>
+                                                        <div class="d-flex justify-content-between popover-row">
+                                                            <div class="w-50">WEEKLY</div>
+                                                            <div class="w-50">Play</div> </div> </div> </div>
+                                                <div class="col-6 pl-0 d-flex flex-column justify-content-between">
+                                                    <div>
+                                                        <h4>TABLES</h4>
+                                                        <div class="d-flex flex-column justify-content-between h-100 p-0">
+                                                            <div class="d-flex justify-content-between popover-row">
+                                                                <div class="w-50">TABLES</div>
+                                                                <div class="w-50">Play</div> </div>
+                                                            <div class="p-0">
+                                                                <div class="popover-row popover-btn"> <a class="w-100" [routerLink]="['/leaderboards']">SEE MORE</a> </div> </div> </div> </div> </div> </div> </div> </div>
+                                    <div class=
+                                        "user-messages" [routerLink]="['user/account-messages']"> <img src="assets/img/chart-icon.png" alt="chart-icon">
+                                        <div class="msg-num">0</div> </div>
+                                    <div class="user-level"> <img src="assets/img/level-chart-icon.png" alt="level-chart-icon" class="show-popover">
+                                        <div class="popover-box text-left p-0">
+                                            <div class="d-flex popover-row p-0">
+                                                <div class="w-75 w-sm-50 px-3 py-2 d-inline">CURRENT LEVEL:</div>
+                                                <div class="w-25 w-sm-50 px-3 py-2 current-level d-inline">246</div> </div>
+                                            <div class="d-flex popover-row p-0">
+                                                <div class="w-75 w-sm-50 px-3 py-2 d-inline">NEXT LEVEL:</div>
+                                                <div class="w-25 w-sm-50 px-3 py-2 next-level d-inline">46</div> </div> </div> <span>LEVEL</span>
+                                        <div class="level-num">5</div> </div>
+                                    <div class="user-collect" [routerLink]="['/games/wheel-of-fortune']"> <img src="assets/img/pie-chart-collect-icon.png" alt="pie-chart-collect-icon">
+                                        <div class="collect-label">COLLECT</div> </div> </div> </div> </div>
+                        <ul class="navbar-nav w-100 justify-content-between py-2 py-md-0 px-4">
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/']">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/vip']"><img class="star"                    src="assets/img/star.png" alt="star">VIP</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/lounge']">LOUNGE</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/slots']">SLOTS</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/tables']">TABLES</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['/tournaments']">TOURNAMENTS</a></li> -->
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/promotions']">PROMOTIONS</a></li> </ul> </div> </nav> </div> </div> </div></header>

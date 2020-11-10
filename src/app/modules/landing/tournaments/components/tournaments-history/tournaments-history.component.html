@@ -1,0 +1,28 @@
+module.exports = "
+<div class=\ "history-box w-100 col-12\">\r\n
+    <div class=\ "d-flex justify-content-between align-items-center mb-3\">\r\n
+        <h4 class=\ "mb-0\">Tournament history</h4>\r\n <a (click)=\ "backClick()\">\r\n      <button class=\"rectangle-btn position-static \">BACK</button></a>\r\n </div>\r\n
+    <div class=\ "table-responsive\">\r\n\r\n
+        <table class=\ "table text-left user-table\">\r\n
+            <thead class=\ "\">\r\n
+                <tr>\r\n
+                    <th scope=\ "col\">ID</th>\r\n
+                    <th scope=\ "col\">NAME</th>\r\n
+                    <th scope=\ "col\">START TIME</th>\r\n
+                    <th scope=\ "col\">END TIME</th>\r\n
+                    <th scope=\ "col\">STATUS</th>\r\n </tr>\r\n </thead>\r\n
+            <tbody>\r\n
+                <tr *ngIf=\ "tournamentsHistory.length===0\"> \r\n
+                    <!-- no-tournament-history td -->\r\n
+                    <td colspan=\ "5\">There is no tournament history.</td>\r\n </tr>\r\n
+                <tr *ngFor=\ "let tourHistory of tournamentsHistory | paginate: config\">\r\n
+                    <td>{{ tourHistory.id }}</td>\r\n
+                    <td>{{ tourHistory.tournamentInfo }}</td>\r\n
+                    <td>{{ tourHistory.date | date: 'MM-dd-yyyy hh:mm:ss z' }}</td>\r\n
+                    <td> </td>\r\n
+                    <td><a href=\ "javascript:void(0)\">{{ tourHistory.tournamentStatus }}</a></td>\r\n </tr>\r\n </tbody>\r\n </table>\r\n </div>\r\n
+    <pagination-controls\r\n [id]=\ "config.id\"\r\n (pageChange)=\ "pageChanged($event)\"\r\n [maxSize]=\
+        "maxSize\"\r\n [directionLinks]=\ "directionLinks\"\r\n [autoHide]=\ "autoHide\"\r\n [responsive]=\ "responsive\"\r\n class=\ "live-pagination\"\r\n previousLabel=\ "Previous\"\r\n nextLabel=\ "Next\"\r\n screenReaderPaginationLabel=\ "Pagination\"\r\n screenReaderPageLabel=\
+        "page\"\r\n screenReaderCurrentLabel=\ "You're on page\">\r\n </pagination-controls>\r\n
+        <p class=\ "tournaments-history-text\">Tournaments are set to auto-complete once all positions have set a score or 24\r\n hours after the\r\n first entry is placed. If not all positions within a tournament have been filled after the 24\r\n hour period then prizes will be paid at a
+            percentage of the total prize pot, dependent on the\r\n number of entrants.</p> \r\n </div>\r\n\r\n"

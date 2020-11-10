@@ -1,0 +1,19 @@
+@import "variables";
+@import "helpers";
+.slots {
+    margin-bottom: 44px;
+}
+
+.slots-img-holder {
+    max-width: calc(100% / 4.1);
+}
+
+@media screen and (max-width: 576px) {
+    .slots-img-holder {
+        max-width: calc(200% / 4.1);
+        margin-bottom: 7px;
+        &:nth-child(even) {
+            float: right;
+        }
+    }
+}

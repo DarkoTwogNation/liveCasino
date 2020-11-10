@@ -1,0 +1,31 @@
+
+<ul class="nav nav-tabs d-flex justify-content-between" id="myTab" role="tablist">
+    <li class="nav-item"> <a class="nav-link" [ngClass]="{'active': activeView=='hourly'}" id="hourly-tab" (click)="switchView('hourly')">HOURLY</a> </li>
+    <li class="nav-item"> <a class="nav-link" [ngClass]="{'active': activeView=='daily'}" id="daily-tab" (click)="switchView('daily')">DAILY</a> </li>
+    <li class="nav-item"> <a class="nav-link" [ngClass]="{'active': activeView=='weekly'}" id="weekly-tab" (click)="switchView('weekly')">WEEKLY</a> </li>
+    <li class="nav-item"> <a class="nav-link" [ngClass]="{'active': activeView=='table'}" id="table-tab" (click)="switchView('table')">TABLE</a> </li></ul>
+<h2 class="main-heading mb-0 slot-challange-heading" [ngClass]=
+    "{'d-none':activeView=='table'}"> <span class="slot-challange-period">{{activeView}} SLOT CHALLANGE</span> <span class="info-sign"></span> <span class="counter">{{daysLeft}}      <countdown #cd [config]="countdownConfig" (event)="countdownEvent($event)"></countdown>  </span></h2>
+<h2
+    class="main-heading mb-0 slot-challange-heading" [ngClass]="{'d-none':activeView!='table'}"> <span class="slot-challange-period">OVERVIEW</span></h2>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="hourly" role="tabpanel" aria-labelledby="hourly-tab">
+            <div class="table-responsive">
+                <table class="table table-borderless mb-0 home-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">RANK</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">VIRTUAL CREDIT WON</th>
+                            <th scope="col" class="most-played">MOST PLAYED</th>
+                            <th scope="col">AWARD</th> </tr> </thead>
+                    <tbody>
+                        <tr *ngFor="let leader of leaderBoardsActive | paginate: config">
+                            <th scope="row">{{ leader.rank }}</th>
+                            <td>{{ leader.name }}</td>
+                            <td>{{ leader.virtualCreditWon | number }}</td>
+                            <td class="most-played"> <img [src]="leader.mostPlayed" alt=""> </td>
+                            <td>{{ leader.award | number }}</td> </tr> </tbody> </table> </div> </div></div>
+    <pagination-controls *ngIf="!previewOnly" [id]="config.id" (pageChange)="pageChanged($event)" [maxSize]=
+        "maxSize" [directionLinks]="directionLinks" [autoHide]="autoHide" [responsive]="responsive" class="live-pagination" previousLabel="Previous" nextLabel="Next" screenReaderPaginationLabel="Pagination" screenReaderPageLabel=
+        "page" screenReaderCurrentLabel="You're on page"></pagination-controls>

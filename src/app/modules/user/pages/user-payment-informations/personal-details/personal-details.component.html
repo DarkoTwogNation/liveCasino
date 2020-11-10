@@ -1,0 +1,13 @@
+module.exports = "
+<form [formGroup]=\ "personalizeForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onPersonalDetails()\" class=\ "form-inline\">\r\n <label for=\ "title\" class=\ "d-block text-right\">TITLE <span class=\"red-colored ml-0 mr-2\"> *</span></label>\r\n <select formControlName=\ "title\" class=\ "form-control\" id=\ "title\">\r\n          <option value=\"\">Please select Title</option>\r\n          <option *ngFor=\"let t of titleEnums\" [value]=\"t.value\" [selected]=\"t.value == title.value\">{{t.value}}</option>\r\n        </select>\r\n
+    <div class=\ "add-info\" *ngIf=\ "title.invalid && (title.dirty || title.touched)\">\r\n
+        <div>This field is reqiured</div>\r\n </div>\r\n <label for=\ "first-name\" class=\ "d-block text-right\">FIRST NAME <span class=\"red-colored ml-0 mr-2\">\r\n            *</span></label>\r\n <input type=\ "text\" formControlName=\ "firstName\" class=\
+        "form-control\" id=\ "first-name\">\r\n
+    <div class=\ "add-info\" *ngIf=\ "firstName.invalid && (firstName.dirty || firstName.touched)\">\r\n
+        <div *ngIf=\ "firstName.errors.required\">This field is reqiured</div>\r\n
+        <div *ngIf=\ "firstName.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n <label for=\ "last-name\" class=\ "d-block text-right\">LAST NAME <span class=\"red-colored ml-0 mr-2\">\r\n            *</span></label>\r\n <input type=\ "text\" formControlName=\
+        "lastName\" class=\ "form-control\" id=\ "last-name\">\r\n
+    <div class=\ "add-info\" *ngIf=\ "lastName.invalid && (lastName.dirty || lastName.touched)\">\r\n
+        <div *ngIf=\ "lastName.errors.required\">This field is reqiured</div>\r\n
+        <div *ngIf=\ "lastName.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n
+    <app-date-picker [parentForm]=\ "personalizeForm\"></app-date-picker>\r\n\r\n <button [disabled]=\ "personalizeForm.invalid\" type=\ "submit\" class=\ "user-btn mt-5 mb-sm-5 mb-md-0\">NEXT</button>\r\n </form>"

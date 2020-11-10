@@ -1,0 +1,27 @@
+
+$strong-pink: #ff006c;
+$red: #ff0000;
+$yellow-orange: #fdb900;
+$black: #000000;
+$white: #ffffff;
+$dull-yellow: #e2c051;
+$warm-grey: #8b8b8b;
+$dull-orange: #d38b2a;
+$greyish: #adadad;
+$shamrock-green: #00ce46;
+$warm-grey-two: #707070;
+$white-two: #e6e4e4;
+
+
+@mixin pink-label {
+  background-color: $strong-pink;
+  font-family: "Helvetica Neue LT W05 76 Bd It";
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  font-size: 22px;
+  color: $white;
+  text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.58);
+  margin-bottom: 14px;
+}

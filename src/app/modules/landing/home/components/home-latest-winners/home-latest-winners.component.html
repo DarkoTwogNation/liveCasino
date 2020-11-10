@@ -1,0 +1,9 @@
+module.exports = "
+<div class=\ "winners h-100\">\r\n
+    <h2 class=\ "main-heading mb-2\">LATEST WINNERS</h2>\r\n
+    <ul class=\ "winners d-flex flex-column justify-content-between mb-0\">\r\n
+        <li class=\ "d-flex justify-content-between\"\r\n *ngFor=\ "let winner of this.latestWinners; let i = index\">\r\n
+            <div class=\ "winner\">\r\n
+                <div class=\ "winner-name\">{{ winner.name }}</div>\r\n
+                <div class=\ "winner-nickname\">{{ winner.game }}</div>\r\n </div>\r\n
+            <div class=\ "cash-prizes\">{{ winner.cashPrizes | number}}</div>\r\n </li>\r\n </ul>\r\n\r\n</div>"

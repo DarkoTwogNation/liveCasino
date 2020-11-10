@@ -1,0 +1,6 @@
+@import "variables";
+@import "helpers";
+.credit-cards {
+    width: 100%;
+    max-width: 345px;
+}

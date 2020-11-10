@@ -1,0 +1,750 @@
+.content-wrapper {
+  padding: 21px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.66);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.66);
+  background-color: #ffffff;
+}
+
+.arrow-btn {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.arrow-btn .button {
+  font-family: "Helvetica Neue LT W05 95 Black";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: black;
+  bottom: 10px;
+  background-color: #fdb900;
+  padding: 0 25px;
+  line-height: 42px;
+  border-radius: 21px;
+  font-size: 22px;
+}
+.arrow-btn .button .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.black-label {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 10px;
+  margin-bottom: 14px;
+}
+
+.red-label {
+  background-color: #ff0000;
+  line-height: 30px;
+  height: 30px;
+}
+
+.img-fluid {
+  min-width: 100%;
+}
+
+.i-info {
+  position: relative;
+  top: -7px;
+  left: 17px;
+  min-width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  font-size: 17px;
+  line-height: 21px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.i-info:hover + .i-add-info {
+  opacity: 1;
+  display: block;
+}
+
+.i-add-info {
+  display: none;
+  opacity: 0;
+}
+
+.pagination-wrapper span {
+  font-size: 15px;
+}
+.pagination-wrapper .pagination {
+  border: 0;
+}
+.pagination-wrapper .pagination .page-item .page-link {
+  border: none;
+  color: #ff0000;
+  text-decoration: underline;
+  font-size: 15px;
+}
+.pagination-wrapper .pagination .page-item.active {
+  background: none;
+}
+.pagination-wrapper .pagination .page-item.active .page-link {
+  background: none;
+  color: #000000;
+}
+
+.live-pagination .ngx-pagination li {
+  border: none;
+  color: #ff0000;
+  text-decoration: underline;
+  font-size: 16px;
+  border: 1px solid #ff0000;
+  margin-right: 8px;
+  text-decoration: none;
+}
+.live-pagination .ngx-pagination li.current {
+  background: #ff0000;
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+}
+.live-pagination .ngx-pagination li.current .page-link {
+  background: none;
+  color: #000000;
+}
+.live-pagination .ngx-pagination li.disabled {
+  display: none;
+}
+.live-pagination .ngx-pagination li a {
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+}
+.live-pagination .ngx-pagination li a:before, .live-pagination .ngx-pagination li a:after {
+  display: none;
+}
+.live-pagination .ngx-pagination li > span:not(:first-child) {
+  line-height: 1;
+}
+
+button[disabled=""],
+a.button[disabled=""] {
+  opacity: 0.6;
+}
+
+button:hover,
+a.button:hover, button:not(.close-btn):hover {
+  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+a.button:active {
+  transform: translateY(1px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:focus,
+a.button:focus {
+  outline: none;
+}
+
+button[disabled=""]:hover,
+a.button[disabled]:hover, button.close-btn:hover, button.l-r-arrows:hover {
+  box-shadow: none;
+}
+
+a.button:hover, a.red-colored:hover, a.red-colored:active {
+  color: initial;
+}
+
+a.a-modal {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .tablet-hide {
+    display: none;
+  }
+
+  .black-label {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .red-label {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-heading {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .content-wrapper {
+    padding: 12px 12px 21px 12px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+}
+header {
+  height: 125px;
+  border-bottom: 2px solid #ff0000;
+  background-color: #ffffff;
+  position: relative;
+}
+header .logo-link img {
+  height: 58px;
+}
+header .header-links {
+  width: 100%;
+}
+header .header-links .header-login {
+  margin-bottom: 15px;
+}
+header .header-links .header-login .login,
+header .header-links .header-login .sign-up {
+  width: 75px;
+  height: 26px;
+  text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.58);
+  font-family: "Helvetica Neue LT W05_75 Bold";
+  font-size: 13px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+header .header-links .header-login .log-in {
+  background-color: #8b8b8b;
+}
+header .header-links .header-login .sign-up {
+  background-color: #ff0000;
+}
+header .popover-box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  z-index: 1100;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #000000;
+  left: 50%;
+  transform: translate(-50%);
+}
+header .popover-box h4 {
+  color: #000000;
+  font-family: "Helvetica Neue LT W05 65 Medium";
+  font-size: 22px;
+}
+
+.main-menu {
+  position: relative;
+  z-index: 1000;
+}
+.main-menu .navbar {
+  padding: 0;
+}
+.main-menu .navbar .navbar-toggler .navbar-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.main-menu .navbar .navbar-toggler .navbar-toggler-icon .bar-line {
+  padding: 2px 10px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.58);
+}
+.main-menu .navbar a {
+  font-family: "Helvetica Neue LT W05 85 Heavy";
+  font-size: 14px;
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #ffffff;
+}
+.main-menu:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 34px solid #ffffff;
+  border-right: 34px solid #ff006c;
+  width: 0;
+}
+.main-menu .star {
+  height: 20px;
+  margin-right: 3px;
+}
+
+.logged-in-btns {
+  display: none;
+}
+
+.logged-in .main-menu-user-part {
+  background-color: #ffffff;
+  padding: 10px 0;
+  display: none;
+  border-top: 15px solid #ff006c;
+}
+.logged-in .header-login,
+.logged-in .main-menu-user-part {
+  padding-left: 22px;
+  width: 100%;
+  margin-right: auto;
+}
+.logged-in .header-login .logged-in-btns,
+.logged-in .main-menu-user-part .logged-in-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logged-in .header-login .logged-in-btns *,
+.logged-in .main-menu-user-part .logged-in-btns * {
+  padding: 0 6px;
+  cursor: pointer;
+}
+.logged-in .header-login .logged-in-btns *:focus,
+.logged-in .main-menu-user-part .logged-in-btns *:focus {
+  outline: none;
+}
+.logged-in .header-login .logged-in-btns #userDropdown,
+.logged-in .main-menu-user-part .logged-in-btns #userDropdown {
+  font-size: 15px;
+  background-color: #adadad;
+  border-radius: 5px;
+  width: 190px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 18px;
+  border: none;
+}
+.logged-in .header-login .logged-in-btns #userDropdown:after,
+.logged-in .main-menu-user-part .logged-in-btns #userDropdown:after {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-left: auto;
+  color: #ff0000;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.logged-in .header-login .logged-in-btns #userDropdown:focus,
+.logged-in .main-menu-user-part .logged-in-btns #userDropdown:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.logged-in .header-login .logged-in-btns .dropdown-menu,
+.logged-in .main-menu-user-part .logged-in-btns .dropdown-menu {
+  width: 190px;
+  padding: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0;
+  background-color: #e6e4e4;
+  border-color: #707070;
+  z-index: 1100;
+}
+.logged-in .header-login .logged-in-btns .dropdown-menu .dropdown-item,
+.logged-in .main-menu-user-part .logged-in-btns .dropdown-menu .dropdown-item {
+  color: #000000;
+  font-family: "Helvetica Neue LT W05 85 Heavy";
+  font-size: 14px;
+  line-height: 2;
+  padding: 0 10px;
+}
+.logged-in .header-login .logged-in-btns .dropdown-menu .refer,
+.logged-in .main-menu-user-part .logged-in-btns .dropdown-menu .refer {
+  background-color: #000000;
+  color: #ffffff;
+}
+.logged-in .header-login .logged-in-btns .dropdown-menu .refer:before,
+.logged-in .main-menu-user-part .logged-in-btns .dropdown-menu .refer:before {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url(../../../assets/img/Path652.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy {
+  position: relative;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box {
+  width: 400px;
+  height: 220px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box h4,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box h4 {
+  font-size: 20px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 {
+  height: 220px;
+  padding: 10px 10px 15px 10px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div {
+  height: calc(100% - 35px);
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row div,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row div {
+  display: inline;
+  padding: 11px 0;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row div:first-of-type,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row div:first-of-type {
+  border-right: 1px dashed #ffffff;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row.popover-btn,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row.popover-btn {
+  background-color: #ff0000;
+  width: 100%;
+  line-height: 46px;
+  font-family: "Helvetica Neue LT W05_75 Bold";
+  font-size: 20px;
+}
+.logged-in .header-login .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row.popover-btn a,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy .popover-box .col-6 > div .popover-row.popover-btn a {
+  border-right: none;
+  color: #ffffff;
+}
+.logged-in .header-login .logged-in-btns .user-trophy:after,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -17px;
+  left: 0;
+}
+.logged-in .header-login .logged-in-btns .user-trophy:hover .popover-box,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy:hover .popover-box {
+  display: block;
+}
+.logged-in .header-login .logged-in-btns .user-trophy:hover:before,
+.logged-in .main-menu-user-part .logged-in-btns .user-trophy:hover:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(135deg, white 0%, white 51%, rgba(255, 255, 255, 0) 51%);
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  transform: rotate(45deg);
+  left: calc(50% - 15px);
+  bottom: -39px;
+  z-index: 1110;
+}
+.logged-in .header-login .logged-in-btns .user-messages,
+.logged-in .main-menu-user-part .logged-in-btns .user-messages {
+  position: relative;
+}
+.logged-in .header-login .logged-in-btns .user-messages .msg-num,
+.logged-in .main-menu-user-part .logged-in-btns .user-messages .msg-num {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.logged-in .header-login .logged-in-btns .user-level,
+.logged-in .main-menu-user-part .logged-in-btns .user-level {
+  position: relative;
+}
+.logged-in .header-login .logged-in-btns .user-level span,
+.logged-in .main-menu-user-part .logged-in-btns .user-level span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 11px;
+}
+.logged-in .header-login .logged-in-btns .user-level .level-num,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .level-num {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.logged-in .header-login .logged-in-btns .user-level:after,
+.logged-in .main-menu-user-part .logged-in-btns .user-level:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  bottom: -17px;
+  left: 6px;
+}
+.logged-in .header-login .logged-in-btns .user-level .popover-box,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box {
+  top: 80px;
+  border-radius: 6px;
+  width: 360px;
+  left: 100%;
+  font-size: 15px;
+}
+.logged-in .header-login .logged-in-btns .user-level .popover-box .popover-row:first-of-type,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box .popover-row:first-of-type {
+  overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #ffffff;
+}
+.logged-in .header-login .logged-in-btns .user-level .popover-box .popover-row:last-of-type,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box .popover-row:last-of-type {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+  background-color: #ff0000;
+  color: white;
+  border-top: 1px solid #000000;
+}
+.logged-in .header-login .logged-in-btns .user-level .popover-box .popover-row .current-level,
+.logged-in .header-login .logged-in-btns .user-level .popover-box .popover-row .next-level,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box .popover-row .current-level,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box .popover-row .next-level {
+  width: 50%;
+  border-left: 1px solid #000000;
+}
+.logged-in .header-login .logged-in-btns .user-level .popover-box:before,
+.logged-in .main-menu-user-part .logged-in-btns .user-level .popover-box:before {
+  left: calc(50% - 55px);
+}
+.logged-in .header-login .logged-in-btns .user-level:hover .popover-box,
+.logged-in .main-menu-user-part .logged-in-btns .user-level:hover .popover-box {
+  display: block;
+  top: 82px;
+}
+.logged-in .header-login .logged-in-btns .user-level:hover:before,
+.logged-in .main-menu-user-part .logged-in-btns .user-level:hover:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(135deg, white 0%, white 51%, rgba(255, 255, 255, 0) 51%);
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  transform: rotate(45deg);
+  left: calc(50% - 15px);
+  bottom: -39px;
+  z-index: 1110;
+}
+.logged-in .header-login .logged-in-btns .user-collect,
+.logged-in .main-menu-user-part .logged-in-btns .user-collect {
+  position: relative;
+}
+.logged-in .header-login .logged-in-btns .user-collect .collect-label,
+.logged-in .main-menu-user-part .logged-in-btns .user-collect .collect-label {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  color: #ffffff;
+  font-size: 11px;
+  width: 60px;
+  height: 22px;
+  background-color: #ff0000;
+  line-height: 22px;
+}
+.logged-in .header-login .logged-in-btns .user-credits,
+.logged-in .main-menu-user-part .logged-in-btns .user-credits {
+  width: 209px;
+  height: 38px;
+  border: 2px solid #00ce46;
+  border-radius: 5px;
+  padding-right: 0;
+  margin-left: auto;
+}
+.logged-in .header-login .logged-in-btns .user-credits .credit-value,
+.logged-in .main-menu-user-part .logged-in-btns .user-credits .credit-value {
+  font-family: "Helvetica Neue LT W05 95 Black";
+  font-size: 15px;
+}
+.logged-in .header-login .logged-in-btns .user-credits .buy-credits,
+.logged-in .main-menu-user-part .logged-in-btns .user-credits .buy-credits {
+  text-align: center;
+  background-color: #00ce46;
+  color: #ffffff;
+  text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.58);
+  font-family: "Helvetica Neue LT W05 85 Heavy";
+  font-size: 14px;
+  line-height: 1.21;
+  height: 38px;
+  padding: 2px 20px;
+}
+.logged-in .header-login .home-page-btns,
+.logged-in .main-menu-user-part .home-page-btns {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .logged-in .header-login .logged-in-btns * {
+    padding: 0 4px;
+  }
+  .logged-in .header-login .logged-in-btns .user-credits {
+    width: 150px;
+    margin-right: 21px;
+  }
+  .logged-in .header-login .logged-in-btns .user-credits .buy-credits {
+    padding: 2px 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 95px;
+  }
+  header .logo-link {
+    position: absolute;
+    transform: scale(0.8);
+  }
+  header .header-links {
+    width: calc(100% + 15px);
+    margin-left: -15px;
+    text-align: center;
+  }
+  header .header-links .header-login {
+    margin-bottom: 0;
+    padding-left: 40px;
+  }
+  header .header-links .main-menu {
+    height: 0;
+    background-color: #ffffff;
+    padding-left: 0;
+    top: -5px;
+  }
+  header .header-links .main-menu:after {
+    display: none;
+  }
+  header .header-links .main-menu .navbar .navbar-toggler {
+    position: relative;
+    margin-left: auto;
+    top: -28px;
+    right: 10px;
+  }
+  header .header-links .main-menu .navbar .navbar-toggler .navbar-toggler-icon .bar-line {
+    background-color: #ff006c;
+  }
+  header .header-links .main-menu .navbar .navbar-collapse {
+    background-color: #ff006c;
+  }
+  header .header-links .main-menu .navbar .navbar-collapse a {
+    line-height: 45px;
+  }
+
+  .logged-in .header-login .logged-in-btns * {
+    padding: 0 4px;
+  }
+  .logged-in .header-login .logged-in-btns .user-credits {
+    margin-left: calc(50% - 70px);
+  }
+  .logged-in .header-login .logged-in-btns div:not(:last-of-type) {
+    display: none;
+  }
+  .logged-in .main-menu-user-part {
+    display: block;
+    padding-left: 0;
+  }
+  .logged-in .main-menu-user-part .logged-in-btns {
+    justify-content: space-evenly;
+    position: relative;
+  }
+  .logged-in .main-menu-user-part .logged-in-btns .user-btn-group .user-trophy .popover-box {
+    left: 248%;
+    width: 318px;
+  }
+  .logged-in .main-menu-user-part .logged-in-btns .user-btn-group .user-level .popover-box {
+    left: 30%;
+    width: 250px;
+  }
+  .logged-in .main-menu-user-part .logged-in-btns * {
+    padding: 0 3px;
+  }
+  .logged-in .main-menu-user-part .logged-in-btns .user-menu .dropdown-menu {
+    left: initial;
+  }
+  .logged-in .header-links .main-menu .navbar {
+    top: -6px;
+  }
+}
+@media screen and (max-width: 576px) {
+  header .logo-link {
+    left: 5px;
+  }
+  header .header-links .header-login .login,
+header .header-links .header-login .sign-up {
+    width: 70px;
+  }
+  header .header-links .main-menu .navbar .navbar-toggler {
+    right: 0px;
+  }
+  header .header-links .main-menu .navbar .navbar-collapse a {
+    line-height: 35px;
+  }
+
+  .logged-in .main-menu-user-part .user-btn-group {
+    width: 100%;
+    justify-content: center;
+    margin: 12px 0 6px 0;
+  }
+  .logged-in .main-menu-user-part .user-btn-group .user-trophy .popover-row .w-50 {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-menu {
+    background-color: #ff006c;
+    font-family: "Helvetica Neue LT W05 76 Bd It";
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 22px;
+    color: #ffffff;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.58);
+    margin-bottom: 14px;
+    overflow: initial;
+    height: 34px;
+  }
+}

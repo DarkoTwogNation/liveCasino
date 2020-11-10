@@ -1,0 +1,16 @@
+module.exports = "
+<div class=\ "row referral\">\r\n
+    <div class=\ "col-12\">\r\n
+        <h2 class=\ "main-heading\">REFER A FRIEND</h2>\r\n
+        <p class=\ "my-4\">Invite your friends for virtual credits! Enter your friends email address below, if they sign up you\r\n both get 10,000 extra virtual credits.</p>\r\n </div>\r\n\r\n\r\n
+    <div class=\ "col-12 col-md-6 mb-4 mb-md-0\">\r\n <img src=\ "../../../../../assets/img/referral.png\" alt=\ "\" class=\ "img-fluid d-block mx-auto\">\r\n </div>\r\n
+    <div class=\ "col-12 col-md-6\">\r\n
+        <form [formGroup]=\ "referalForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onSendReferals()\">\r\n <input type=\ "text\" placeholder=\ "Friends email\" formControlName=\ "email1\" class=\ "form-control red-underlined-input\">\r\n <input type=\ "text\" placeholder=\ "Friends email\" formControlName=\ "email2\" class=\
+                "form-control red-underlined-input\">\r\n <input type=\ "text\" placeholder=\ "Friends email\" formControlName=\ "email3\" class=\ "form-control red-underlined-input\">\r\n <input type=\ "text\" placeholder=\ "Friends email\" formControlName=\ "email4\" class=\
+                "form-control red-underlined-input\">\r\n <input type=\ "text\" placeholder=\ "Friends email\" formControlName=\ "email5\" class=\ "form-control red-underlined-input\">\r\n\r\n
+            <div class=\ "arrow-btn text-center\">\r\n <button [disabled]=\ "isFormInvalid()\" type=\ "submit\" class=\ "button mx-auto d-flex justify-content-center align-items-center\">\r\n          SEND REFERRAL <span class=\"arrow d-flex justify-content-center align-items-center\"> ❯</span>\r\n        </button>\r\n
+                </div>\r\n\r\n </form>\r\n </div>\r\n\r\n\r\n
+    <p class=\ "my-5 col-12\">Please make sure you have the correct details. Once you click submit you and your friend will\r\n receive an email to confirm the next steps on receiving your virtual credits. Terms and Conditions apply, please
+        <a\r\n href=\ "javascript:void(0)\"
+            class=\ "red-colored\" [routerLink]=\ "['../../terms']\">click here</a>. By submitting the form you are\r\n confirming that you have consent to provide these email addresses as part of the referral</p>\r\n
+    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"

@@ -1,0 +1,36 @@
+@import "variables";
+@import "helpers";
+.featured-games {
+    margin-bottom: 21px;
+    .featured-game:first-of-type {
+        padding-right: 7px;
+    }
+    .featured-game:last-of-type {
+        padding-left: 7px;
+    }
+    .featured-game .rectangle-btn {
+        padding: 0px 10px;
+        line-height: 22px;
+        font-size: 12px;
+        right: 3%;
+        bottom: 13px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .featured-games {
+        .featured-game:first-of-type {
+            padding-right: 1rem;
+        }
+        .featured-game:last-of-type {
+            padding-left: 1rem;
+        }
+        .featured-game .rectangle-btn {
+            padding: 0px 10px;
+            line-height: 22px;
+            font-size: 12px;
+            right: 3%;
+            bottom: 13px;
+        }
+    }
+}

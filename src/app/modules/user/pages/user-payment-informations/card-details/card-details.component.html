@@ -1,0 +1,32 @@
+module.exports = "
+<form [formGroup]=\ "creditCardForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onCardDetailsUpdate()\" class=\ "form-inline\">\r\n <label class=\ "d-block text-right\">CARD TYPE <span class=\"red-colored ml-0 mr-2\"> *</span></label>\r\n
+    <div class=\ "card-types\">\r\n
+        <div *ngFor=\ "let ctype of cardTypes; let cardIndex = index\" class=\ "custom-control custom-radio w-50\" [ngClass]=\ "{'mr-2': cardIndex%2!==0, 'mr-n2': cardIndex%2===0}\">\r\n <input type=\ "radio\" [id]=\ "ctype\" [value]=\ "ctype\" formControlName=\ "type\" class=\ "custom-control-input\">\r\n <label class=\ "custom-control-label\" [for]=\ "ctype\">{{ctype}}</label>\r\n </div>\r\n </div>\r\n\r\n <label for=\
+        "name-on-card\" class=\ "d-block text-right\">NAME ON CARD <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <input type=\ "text\" class=\ "form-control\" formControlName=\ "nameOnCard\" id=\ "name-on-card\">\r\n
+    <div class=\ "add-info\" *ngIf=\
+        "nameOnCard.invalid && (nameOnCard.dirty || nameOnCard.touched)\">\r\n
+        <div *ngIf=\ "nameOnCard.errors.required\">This field is reqiured</div>\r\n
+        <div *ngIf=\ "nameOnCard.errors.minlength\">The minimum length is 3 characters</div>\r\n
+        <div *ngIf=\ "nameOnCard.errors.minlength\">Please enter only alphabetic characters</div>\r\n </div>\r\n\r\n <label for=\ "card-number\" class=\ "d-block text-right\">CARD NUMBER <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <input type=\ "number\" class=\
+        "form-control\" formControlName=\ "cardNumber\" id=\ "card-number\">\r\n
+    <div class=\ "add-info\" *ngIf=\ "cardNumber.invalid && (cardNumber.dirty || cardNumber.touched)\">\r\n
+        <div *ngIf=\ "cardNumber.errors.required\">This field is reqiured</div>\r\n
+        <div *ngIf=\ "cardNumber.errors.pattern\">Please enter exactly 16 characters</div>\r\n </div>\r\n
+    <div class=\ "add-info\" *ngIf=\ "(cardNumber.dirty || cardNumber.touched) && creditCardForm.errors?.creditCard\">\r\n
+        <div>Credit Card Number is not correct</div>\r\n </div>\r\n\r\n <label for=\ "expiry-date\" class=\ "d-block text-right\">EXPIRY DATE <span class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <select formControlName=\ "expMonth\" class=\
+        "form-control\" id=\ "expMonth\">\r\n        <option value=\"\" [selected]=\"!expMonth.value\">Month</option>\r\n      <option *ngFor=\"let month of monthsList\" [value]=\"month\" [selected]=\"month == expMonth.value\">{{month}}</option>\r\n    </select>\r\n
+    <select
+        formControlName=\ "expYear\" class=\ "form-control\" id=\ "expYear\">\r\n
+        <option value=\ "\" [selected]=\ "!expYear.value\">Year</option>\r\n
+        <option *ngFor=\ "let year of yearsList\" [value]=\ "year\" [selected]=\ "year == expYear.value\">{{year}}</option>\r\n </select>\r\n
+        <div class=\ "add-info\" *ngIf=\ "expMonth.invalid && (expMonth.dirty || expMonth.touched) || expYear.invalid && (expYear.dirty || expYear.touched)\">\r\n
+            <div>This fields are reqiured</div>\r\n </div>\r\n \r\n\r\n <label for=\ "cv23\" class=\ "d-block text-right\">CV2/3 <span class=\"red-colored ml-0 mr-2\">\r\n        *</span>\r\n      <span class=\"i-info\">i</span>\r\n      <span class=\"i-add-info\">\r\n        <img src=\"../../../../../assets/img/security-code.png\" alt=\"\">\r\n      </span>\r\n    </label>\r\n
+        <input type=\ "text\" formControlName=\ "cv23\" class=\ "form-control\" id=\ "cv23\">\r\n
+        <div class=\ "add-info\" *ngIf=\ "cv23.invalid && (cv23.dirty || cv23.touched)\">\r\n
+            <div *ngIf=\ "cv23.errors.required\">This field is reqiured</div>\r\n
+            <div *ngIf=\ "cv23.errors.pattern\">CCV Number is not correct</div>\r\n </div>\r\n\r\n <label for=\ "nickname\" class=\ "d-block text-right\">SAVE THIS CARD AS (NICKNAME) <span\r\n        class=\"red-colored ml-0 mr-2\">\r\n        *</span></label>\r\n <input type=\ "text\"
+            formControlName=\ "nickname\" class=\ "form-control\" id=\ "nickname\">\r\n
+        <div class=\ "add-info\" *ngIf=\ "nickname.invalid && (nickname.dirty || nickname.touched)\">\r\n
+            <div *ngIf=\ "nickname.errors.required\">This field is reqiured</div>\r\n
+            <div *ngIf=\ "nickname.errors.minLength\">The minimum length is 4 characters</div>\r\n </div>\r\n\r\n
+        <div class=\ "btns-box my-5\">\r\n <button class=\ "user-btn d-inline mr-2\" type=\ "button\" (click)=\ "stepBack()\">BACK</button>\r\n <button class=\ "user-btn d-inline\" type=\ "submit\" [disabled]=\ "creditCardForm.invalid\">NEXT</button>\r\n </div>\r\n </form>"

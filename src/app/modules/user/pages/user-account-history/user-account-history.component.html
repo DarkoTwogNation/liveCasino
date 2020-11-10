@@ -1,0 +1,26 @@
+module.exports = "
+<div class=\ "user-styles pt-3 account-history\">\r\n
+    <div class=\ "row\">\r\n
+        <div class=\ "col-12 mb-5\">\r\n
+            <h3 class=\ "mb-3\">Account History</h3>\r\n
+            <p class=\ "mb-2 history-text\">Every online spin, wager and tournament. Every detail: Review them here.</p>\r\n
+            <div class=\ "row\">\r\n
+                <div class=\ "col-12\">\r\n
+                    <div class=\ "table-responsive\">\r\n
+                        <table class=\ "table table-borderless user-table mb-2\">\r\n
+                            <thead>\r\n
+                                <tr>\r\n
+                                    <th scope=\ "col\">DAT</th>\r\n
+                                    <th scope=\ "col\">REF</th>\r\n
+                                    <th scope=\ "col\">DESCRIPTION</th>\r\n
+                                    <th scope=\ "col\">AMOUNT</th>\r\n </tr>\r\n </thead>\r\n
+                            <tbody>\r\n
+                                <tr *ngFor=\ "let history of accountHistory | paginate: config\"> \r\n
+                                    <td>{{ history.date | date: 'MM-dd-yyyy hh:mm:ss z' }}</td>\r\n
+                                    <td>{{ history.referenceNumber }}</td>\r\n
+                                    <td>{{ history.description }}</td>\r\n
+                                    <td>{{ history.amount | number }}</td>\r\n </tr>\r\n </tbody>\r\n </table>\r\n </div>\r\n
+                    <pagination-controls\r\n [id]=\ "config.id\"\r\n (pageChange)=\ "pageChanged($event)\"\r\n [maxSize]=\ "maxSize\"\r\n [directionLinks]=\
+                        "directionLinks\"\r\n [autoHide]=\ "autoHide\"\r\n [responsive]=\ "responsive\"\r\n class=\ "live-pagination\"\r\n previousLabel=\ "Previous\"\r\n nextLabel=\ "Next\"\r\n screenReaderPaginationLabel=\ "Pagination\"\r\n screenReaderPageLabel=\
+                        "page\"\r\n screenReaderCurrentLabel=\ "You're on page\">\r\n </pagination-controls>\r\n </div>\r\n </div>\r\n </div>\r\n\r\n </div>\r\n
+    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"

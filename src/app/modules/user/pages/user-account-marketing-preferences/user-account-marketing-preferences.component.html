@@ -1,0 +1,15 @@
+module.exports = "
+<div class=\ "user-styles marketing-form pt-3 account-marketing-preferences\">\r\n
+    <div class=\ "row\">\r\n\r\n
+        <div class=\ "col-12 mb-4 marketing-preferences-text\">\r\n
+            <h3 class=\ "mb-3\">Marketing Preferences</h3>\r\n
+            <p class=\ "mb-2\">Change your preferences for receiving updates on online-exclusive promotions, new games and much\r\n more.</p>\r\n
+            <p class=\ "mb-4 green-colored\">Marketing Preferences successfully updated.</p>\r\n
+            <div class=\ "row\">\r\n
+                <div class=\ "col-12\">\r\n
+                    <form [formGroup]=\ "marketingForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onSubmit()\">\r\n <label class=\ "form-check-custom mb-3\">Yes. I would like to receive marketing communications delivered via Email.\r\n              <input type=\"checkbox\" formControlName=\"deliverEmail\" class=\"form-control\" >\r\n              <span class=\"checkmark\"></span>\r\n            </label>\r\n
+                        <label class=\ "form-check-custom mb-3\">Yes. I would like to receive marketing communications delivered to my home adress.\r\n              <input type=\"checkbox\" formControlName=\"deliverHome\" class=\"form-control\" >\r\n              <span class=\"checkmark\"></span>\r\n            </label>\r\n
+                        <label class=\ "form-check-custom mb-3\">Yes. I would like to receive marketing communications via Phone.\r\n              <input type=\"checkbox\" formControlName=\"deliverPhone\" class=\"form-control\" >\r\n              <span class=\"checkmark\"></span>\r\n            </label>\r\n
+                        <label class=\ "form-check-custom mb-3\">Yes. I would like to receive marketing communications via SMS.\r\n              <input type=\"checkbox\" formControlName=\"deliverSms\" class=\"form-control\" >\r\n              <span class=\"checkmark\"></span>\r\n            </label>\r\n\r\n
+                        <button type=\ "submit\" class=\ "user-btn my-4\">SUBMIT</button>\r\n </form>\r\n </div>\r\n </div>\r\n </div>\r\n </div>\r\n
+    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"

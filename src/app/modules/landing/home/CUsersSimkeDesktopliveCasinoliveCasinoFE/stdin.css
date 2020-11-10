@@ -1,0 +1,62 @@
+@import "variables";
+@import "helpers";
+.top-zone,
+.featured-games,
+#myTabContent {
+    margin-bottom: 21px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .winners {
+        height: calc(100% - 48px);
+        li {
+            height: auto;
+            padding: 0.2vw 5px;
+            .winner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .winner-name {
+                    font-size: 15px;
+                    line-height: 1;
+                }
+                .winner-nickname {
+                    line-height: 1;
+                    font-size: 13px;
+                }
+            }
+            .cash-prizes {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 768px) {
+    .winners {
+        li {
+            .cash-prizes {
+                font-size: 15px;
+                line-height: 240%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-link {
+        padding: .5rem .2rem;
+        font-size: 15px;
+    }
+    .slots-img-holder {
+        max-width: calc(200% / 4.1);
+        margin-bottom: 7px;
+        &:nth-child(even) {
+            float: right;
+        }
+    }
+    .black-label {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}

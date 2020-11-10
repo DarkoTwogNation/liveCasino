@@ -1,0 +1,37 @@
+@import "variables";
+@import "helpers";
+.table.home-table {
+    display: none !important;
+}
+
+img {
+    display: none;
+}
+
+.see-more-btn {
+    display: inline-block;
+    width: 84px;
+    height: 23px;
+    border-radius: 3px;
+    background-color: #fdb900;
+    font-family: "Helvetica Neue LT W05_75 Bold";
+    font-size: 12px;
+    color: #000000;
+    text-shadow: none;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    line-height: 23px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+:host-context(.table-context) {
+    table {
+        th.most-played,
+        td.most-played {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+
+<div [formGroup]="parentForm"> <label for="date-of-birth" class="d-block text-right date-of-birth-label">DATE OF BIRTH <span class="red-colored ml-0 mr-2">            *</span></label> <input type="text" formControlName="month" class=
+        "form-control time-input" id="date-of-birth"> <input type="text" formControlName="day" class="form-control time-input"> <input type="text" formControlName="year" class="form-control time-input">
+    <div class="add-info" *ngIf=
+        "parentForm.controls.month.invalid && (parentForm.controls.month.dirty || parentForm.controls.month.touched) || parentForm.controls.day.invalid && (parentForm.controls.day.dirty || parentForm.controls.day.touched) || parentForm.controls.year.invalid && (parentForm.controls.year.dirty || parentForm.controls.year.touched)">
+        <div>Your birth date is not valid.</div> </div></div>

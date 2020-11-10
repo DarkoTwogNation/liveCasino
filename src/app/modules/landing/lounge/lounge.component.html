@@ -1,0 +1,21 @@
+module.exports = "
+<!-- Loyalty Lounge -->\r\n
+<div class=\ "container content-wrapper\">\r\n
+    <div class=\ "row lounge\">\r\n
+        <div class=\ "col-12\">\r\n
+            <h2 class=\ "main-heading\">LOYALTY LOUNGE</h2>\r\n </div>\r\n
+        <!-- Lounge Games -->\r\n
+        <div class=\ "lounge-games-box col-12 d-flex justify-content-between py-0 py-md-4\">\r\n <a *ngFor=\ "let loyaltyGame of loyaltyLounge\" \r\n [routerLink]=\ "['/games/', loyaltyGame.routeLink]\">\r\n            <img class=\"img-fluid\" \r\n                 [src]=\"loyaltyGame.image\" \r\n                 alt=\"Live_Logo\">\r\n        </a>\r\n
+            </div>\r\n
+        <div class=\ "lounge-text-box d-flex col-12 align-items-center my-3\">\r\n
+            <div class=\ "col-12 p-md-4\">\r\n
+                <div class=\ "row\">\r\n
+                    <div class=\ "col-12 col-md-3 d-flex align-items-center mb-3 mb-md-0 pt-4 pt-md-0\">\r\n <a href=\ "javascript:void(0)\"><img class=\"img-fluid\" src=\"assets/img/Live_Logo.png\" alt=\"Live_Logo\"></a>\r\n </div>\r\n
+                    <div class=\ "col-12 col-md-9 d-flex flex-column align-items-left pl-md-2 pb-2 pb-md-0 pt-md-2\">\r\n
+                        <p>We’ve rolled out the red carpet for you as we welcome you to the <br><strong> Live! Social Casino Loyalty Lounge, our valued Live! Rewards players.</strong> Here, you can have private access to exclusive games with your card linked.
+                            </p>\r\n
+                        <p>This is just one of the many advantages of linking your Live! Rewards Club account to your Live! Social Casino account. Not only will you be able to play the latest games, but you’ll also receive 10% back in loyalty points on all
+                            purchases.</p>\r\n
+                        <p>Good luck and remember to keep checking your Live! Social Casino Loyalty Lounge for new games and bonuses!</p>\r\n </div>\r\n </div>\r\n </div>\r\n </div>\r\n</div>\r\n
+    <!-- Credit Cards -->\r\n
+    <app-credit-cards></app-credit-cards>\r\n</div>\r\n"

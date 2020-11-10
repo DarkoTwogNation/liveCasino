@@ -1,0 +1,110 @@
+@import "variables";
+@import "helpers";
+footer {
+    padding: 40px 21px;
+    border-top: 2px solid $red;
+    position: relative;
+    .row:first-of-type {
+        margin-bottom: 50px;
+    }
+    .row>.col-3,
+    .row>.col-4 {
+        padding: 0 42px;
+    }
+    .footer-logo {
+        height: 58px;
+        margin-bottom: 21px;
+        &+p {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+    }
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    h5 {
+        margin-bottom: 14px;
+        font-family: "Helvetica Neue LT W05_75 Bold";
+        font-size: 13px;
+    }
+    ul li {
+        padding: 3px 0;
+        a {
+            color: $black;
+            font-size: 13px;
+            &:hover {
+                color: $warm-grey;
+            }
+        }
+    }
+    .hosted-n-age {
+        span {
+            font-family: "Helvetica Neue LT W05 96 Blk It";
+            font-size: 18px;
+        }
+        .age {
+            &:before {
+                display: inline-block;
+                font-family: "Helvetica Neue LT W05 95 Black";
+                font-size: 21px;
+                content: "21";
+                height: 38px;
+                width: 38px;
+                border-radius: 50%;
+                background-color: $red;
+                color: $white;
+                text-align: center;
+                line-height: 38px;
+                margin-right: 10px;
+                padding-left: 2px;
+            }
+        }
+    }
+    .text-center {
+        font-family: "Helvetica Neue LT W05 76 Bd It";
+        line-height: 1;
+        a {
+            color: $red;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 100%;
+        background-color: white;
+        top: -12px;
+        left: 0;
+        z-index: 990;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        .footer-menu {
+            text-align: right;
+        }
+        .hosted-n-age {
+            margin: 0 auto;
+            span {
+                font-size: 17px;
+                width: 50%;
+                text-align: right;
+                padding: 1rem;
+                &:last-of-type {
+                    text-align: left;
+                    padding-right: 0;
+                    &.age:before {
+                        margin-right: 6px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {}

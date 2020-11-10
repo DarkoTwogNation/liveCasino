@@ -1,0 +1,14 @@
+module.exports = "
+<div class=\ "modal-bg h-100 w-100 login\">\r\n
+    <div class=\ "modal-wrapper\">\r\n
+        <h4>LOGIN</h4>\r\n <button class=\ "close-btn\" (click)=\ "closeMe()\">X</button>\r\n
+        <div class=\ "modal-main d-flex flex-column justify-content-between\">\r\n
+            <form [formGroup]=\ "authForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onLogin()\">\r\n <input type=\ "text\" placeholder=\ "Username\" appAutofocus required formControlName=\ "username\" class=\ "form-control\" class=\ "red-underlined-input\">\r\n <input type=\ "password\" placeholder=\ "Password\" required formControlName=\
+                    "password\" class=\ "form-control\" class=\ "red-underlined-input\">\r\n
+                <div *ngIf=\ "username.invalid && username.dirty && password.invalid && password.dirty\">\r\n
+                    <p class=\ "modal-warning-msg red-colored\">Incorrect username and/or password</p>\r\n </div>\r\n
+                <div class=\ "d-flex justify-content-between my-4\">\r\n
+                    <div class=\ "custom-control custom-checkbox\">\r\n <input formControlName=\ "rememberme\" class=\ "form-control\" type=\ "checkbox\" class=\ "custom-control-input\" id=\ "customCheck1\">\r\n <label class=\ "custom-control-label\" for=\ "customCheck1\">Remember me</label>\r\n </div>\r\n
+                    <a (click)=\ "forgotPassword()\" class=\ "a-modal\">Forgot your password</a>\r\n </div>\r\n <button type=\ "submit\" class=\ "red-modal-btn w-75 mb-3\" [disabled]=\ "authForm.invalid\">LOGIN</button>\r\n\r\n </form>\r\n
+            <p class=\
+                "mb-0 mt-auto\">Not registered? <a (click)=\ "signUpNow()\" class=\ "a-modal\">Sign up now</a></p>\r\n </div>\r\n </div>\r\n\r\n </div>\r\n"

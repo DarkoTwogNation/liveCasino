@@ -1,0 +1,43 @@
+module.exports = "
+<div class=\ "modal-bg h-100 w-100 sign-up\">\r\n
+    <div class=\ "modal-wrapper bg-white\">\r\n
+        <div class=\ "d-sm-flex\">\r\n
+            <!-- modal main -->\r\n
+            <div class=\ "modal-main-wrapper\">\r\n
+                <h4 class=\ "align-self-top\">SIGN UP</h4>\r\n
+                <div class=\ "modal-main d-flex flex-column justify-content-between\">\r\n
+                    <form [formGroup]=\ "authForm\" #formDir=\ "ngForm\" (ngSubmit)=\ "onSignUp()\">\r\n <input type=\ "text\" placeholder=\ "Username *\" appAutofocus required formControlName=\ "username\"\r\n class=\ "red-underlined-input\">\r\n
+                        <div *ngIf=\ "username.invalid && (username.dirty || username.touched)\">\r\n
+                            <p class=\ "modal-warning-msg red-colored\" *ngIf=\ "username.errors.required\">This field is reqiured</p>\r\n
+                            <p class=\ "modal-warning-msg red-colored\" *ngIf=\ "username.errors.minlength\">The minimum length is 4 characters</p>\r\n </div>\r\n <input type=\ "email\" placeholder=\ "Email *\" required formControlName=\ "email\" class=\ "red-underlined-input\">\r\n
+                        <div *ngIf=\
+                            "email.invalid && (email.dirty || email.touched)\">\r\n
+                            <p class=\ "modal-warning-msg red-colored\" *ngIf=\ "email.errors.required\">This field is reqiured</p>\r\n
+                            <p class=\ "modal-warning-msg red-colored\" *ngIf=\ "email.errors.email\">Email format is wrong.</p>\r\n </div>\r\n <input type=\ "password\" placeholder=\ "Password *\" required formControlName=\ "password\"\r\n class=\ "d-inline red-underlined-input\">\r\n <span class=\ "info i-info\">i</span>\r\n
+                        <div class=\ "add-info i-add-info\" *ngIf=\ "password.invalid && (password.dirty || password.touched)\">\r\n
+                            <p class=\ "modal-warning-msg red-colored pass-modal-warning-msg\" *ngIf=\ "password.errors.required\">This field is reqiured</p>\r\n
+                            <p class=\ "modal-warning-msg red-colored pass-modal-warning-msg\" *ngIf=\ "password.errors.pattern\">Your password must consist of at least 6 characters, with minimum one\r\n letter and one digit</p>\r\n </div>\r\n\r\n
+                        <p class=\ "mb-0 text-left\">Password Strength: <span class=\ "ml-0 mr-2\">\r\n              </span></p>\r\n\r\n
+                        <!-- Choose class for span.pass-stength-level for displaying appropriate level of password strength -->\r\n
+                        <!-- <span class=\"pass-strength-level pass-not-entered\">Password not entered</span> -->\r\n
+                        <!-- <span class=\"pass-strength-level pass-weak\">Weak<span></span></span> -->\r\n
+                        <!-- <span class=\"pass-strength-level pass-ok w-50 d-block\"> -->\r\n <span class=\ "pass-strength-level d-block\">\r\n                <app-encapsulated-pass [passwordVal]=\"passValue\"></app-encapsulated-pass>\r\n            </span>\r\n
+                        <!-- <span class=\"pass-strength-level pass-strong\">Strong<span></span></span> -->\r\n\r\n\r\n <input *ngIf=\ "havePromoCode\" type=\ "text\" placeholder=\ "PromoCode\" formControlName=\ "promocode\"\r\n class=\ "d-inline red-underlined-input mt-3\">\r\n
+                        <p *ngIf=\ "!havePromoCode\" class=\ "mt-3\">Do you have a promo code? <a (click)=\ "showPromoCode()\"\r\n class=\ "a-modal\">Click here</a></p>\r\n\r\n
+                        <div class=\ "my-3\">\r\n <label class=\ "form-check-custom\">By submitting my registration I accept the <a href=\"/terms\"\r\n                  target=\"_blank\" class=\"a-modal\">terms and conditions</a> of this agreement and certify that I am over\r\n                the age of 21. <span class=\"red-colored\">*</span>\r\n                <input type=\"checkbox\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"termsAndConditions\" class=\" \">\r\n                <span class=\"checkmark\"></span>\r\n              </label>\r\n
+                            </div>\r\n <button type=\ "submit\" class=\ "red-modal-btn mb-3\" [disabled]=\ "authForm.invalid||!termsAndConditions\">SIGN UP\r\n              NOW</button>\r\n\r\n </form>\r\n
+                    <p class=\ "mb-0 mt-auto\">Already have an account <a (click)=\ "haveAccount()\" class=\ "a-modal\">Login</a></p>\r\n </div>\r\n </div>\r\n\r\n
+            <!-- modal aside -->\r\n
+            <div\r\n class=\ "modal-aside px-3 px-lg-4 py-3 py-sm-5 bg-white postition-relative d-flex flex-column justify-content-between\">\r\n <button class=\ "close-btn\" (click)=\ "closeMe()\">X</button>\r\n
+                <div class=\ "d-flex mb-2 mb-sm-0\">\r\n <span class=\ "num\">1</span>\r\n
+                    <div>\r\n
+                        <div class=\ "sign-up-step\">SIGN UP TODAY AND GET <span class=\ "red-colored\">5,000 FREE CREDITS</span></div>\r\n </div>\r\n </div>\r\n
+                <div class=\ "d-flex mb-2 mb-sm-0\">\r\n <span class=\ "num\">2</span>\r\n
+                    <div>\r\n
+                        <div class=\ "sign-up-step\">DAILY <span class=\ "red-colored\">FREE LOGIN BONUS</span></div>\r\n </div>\r\n </div>\r\n
+                <div class=\ "d-flex mb-2 mb-sm-0\">\r\n <span class=\ "num\">3</span>\r\n
+                    <div>\r\n
+                        <div class=\ "sign-up-step\">PLAY OVER <span class=\ "red-colored\">+50\r\n                EXCLUSIVE GAMES</span></div>\r\n </div>\r\n </div>\r\n
+                <div class=\ "d-flex mb-2 mb-sm-0 mt-2 mt-sm-0\">\r\n <span class=\ "num q-mark info\">?</span>\r\n
+                    <div>\r\n
+                        <div class=\ "need-help\">NEED HELP? <a class=\ "red-colored\" href=\ "mailto:privacy@livecasino.social\">EMAIL US\r\n                HERE</a></div>\r\n </div>\r\n </div>\r\n </div>\r\n </div>\r\n </div>\r\n\r\n</div>\r\n"

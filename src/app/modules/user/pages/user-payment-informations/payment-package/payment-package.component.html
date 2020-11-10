@@ -1,0 +1,12 @@
+module.exports = "
+<div class=\ "ml-md-auto \">\r\n
+    <div class=\ "grid-container\">\r\n
+        <div class=\ "payment-img pt-2\">\r\n <img src=\ "../../../../../assets/img/credits_1.png\" class=\ "img-fluid d-block mx-auto\" alt=\ "\">\r\n </div>\r\n
+        <div class=\ "package d-flex justify-content-between align-items-center\">\r\n
+            <h5 class=\ "mb-0\">Your package</h5>\r\n <a [routerLink]=\ "['/buy-credits']\" class=\ "red-colored\">Change Package</a>\r\n </div>\r\n
+        <div class=\ "credits text-center red-colored\">\r\n
+            <div class=\ "credits-amount\">{{selectedPackage.virtualCredits | number}}</div>\r\n
+            <div>Credits</div>\r\n </div>\r\n
+        <div class=\ "gain-cost\">\r\n
+            <p>YOU GAIN: <span class=\ "red-colored gain-percent\">+{{selectedPackage.percentGain}}%</span></p>\r\n
+            <p>COST:<span class=\ "red-colored cost-amount\">{{selectedPackage.cost | currency}}</span></p>\r\n </div>\r\n </div>\r\n</div>"
